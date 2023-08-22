@@ -1,7 +1,5 @@
 package no03_String;
 
-import java.util.StringTokenizer;
-
 public class Ex01_자료형변환 {
 
 	public static void main(String[] args) {
