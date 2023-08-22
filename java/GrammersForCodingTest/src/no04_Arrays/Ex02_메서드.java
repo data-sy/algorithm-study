@@ -2,6 +2,7 @@ package no04_Arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Ex02_메서드 {
@@ -31,6 +32,17 @@ public class Ex02_메서드 {
 		Arrays.fill(arr, 5);
 		System.out.println(Arrays.toString(arr)); // [5, 5, 5, 5, 5]
 		
+		System.out.println("===== asList : 배열을 ArrayList로 변환 =====");
+		List<String> list = Arrays.asList(arrStr);
+		for (String str : list) {
+		     System.out.println(str + " ");
+		}
+		// List 아닌 ArrayList로 받으려면
+		Integer[] arrInt = {5, 26, 1, 74, 59, 38};
+		ArrayList<Integer> arrlist = new ArrayList<Integer>(Arrays.asList(arrInt));
+		for (int i : arrlist) {
+		     System.out.print(i + " ");
+		}
 	}
 
 }
