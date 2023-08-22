@@ -31,6 +31,17 @@ public class Ex02_메서드 {
 		Arrays.fill(arr, 5);
 		System.out.println(Arrays.toString(arr)); // [5, 5, 5, 5, 5]
 		
+		
+		System.out.println("===== asList : 배열을 ArrayList로 변환 =====");
+		ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(arr));
+		for (int i : list) {
+		     System.out.print(i + " ");
+		}	
+		
+		
+		
+		
+		
 	}
 
 }
