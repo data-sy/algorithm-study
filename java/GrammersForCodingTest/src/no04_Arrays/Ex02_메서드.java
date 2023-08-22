@@ -2,6 +2,7 @@ package no04_Arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Ex02_메서드 {
@@ -31,17 +32,19 @@ public class Ex02_메서드 {
 		Arrays.fill(arr, 5);
 		System.out.println(Arrays.toString(arr)); // [5, 5, 5, 5, 5]
 		
-		
 		System.out.println("===== asList : 배열을 ArrayList로 변환 =====");
-		ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(arr));
-		for (int i : list) {
+		List<String> list = Arrays.asList(arrStr);
+		for (String str : list) {
+		     System.out.println(str + " ");
+		}
+		// 이러면 주소를 복사하는 거라서 add 사용 못함 => new로 새로 생성하면 원본 배열과 분리됨
+		// 출처 : https://m.blog.naver.com/roropoly1/221140156345
+		Integer[] arrInt = {5, 26, 1, 74, 59, 38};
+		ArrayList<Integer> arrlist = new ArrayList<Integer>(Arrays.asList(arrInt));
+		for (int i : arrlist) {
 		     System.out.print(i + " ");
-		}	
-		
-		
-		
-		
-		
+		}
+			// 내부적으로 배열을 먼저 생성하고, 이를 List<E>로 래핑(wapping)
 	}
 
 }

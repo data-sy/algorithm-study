@@ -1,7 +1,5 @@
 package no04_Arrays;
 
-import java.util.StringTokenizer;
-
 public class Ex01_배열생성 {
 
 	public static void main(String[] args) {

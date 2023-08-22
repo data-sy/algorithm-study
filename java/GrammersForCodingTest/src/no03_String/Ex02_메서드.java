@@ -1,7 +1,5 @@
 package no03_String;
 
-import java.util.StringTokenizer;
-
 public class Ex02_¸Þ¼­µå {
 
 	public static void main(String[] args) {
