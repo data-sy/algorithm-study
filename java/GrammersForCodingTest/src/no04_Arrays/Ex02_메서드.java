@@ -44,6 +44,7 @@ public class Ex02_메서드 {
 		for (int i : arrlist) {
 		     System.out.print(i + " ");
 		}
+			// 내부적으로 배열을 먼저 생성하고, 이를 List<E>로 래핑(wapping)
 	}
 
 }
