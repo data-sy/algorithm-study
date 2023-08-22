@@ -37,7 +37,8 @@ public class Ex02_메서드 {
 		for (String str : list) {
 		     System.out.println(str + " ");
 		}
-		// List 아닌 ArrayList로 받으려면
+		// 이러면 주소를 복사하는 거라서 add 사용 못함 => new로 새로 생성하면 원본 배열과 분리됨
+		// 출처 : https://m.blog.naver.com/roropoly1/221140156345
 		Integer[] arrInt = {5, 26, 1, 74, 59, 38};
 		ArrayList<Integer> arrlist = new ArrayList<Integer>(Arrays.asList(arrInt));
 		for (int i : arrlist) {
