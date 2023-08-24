@@ -22,6 +22,11 @@ public class Ex01_자료형변환 {
 		// String.valueOf : double, char -> String
 		System.out.println(String.valueOf(5.0).getClass().getName());
 		System.out.println(String.valueOf('A').getClass().getName());
+		
+		// 아스키코드 이용 : Char -> int
+			// 같은 의미의 문자와 숫자의 코드 값 차이는 48, '0'
+		int n3 = '9'-'0';
+		System.out.println(n3); // 9
 
 	
 	
