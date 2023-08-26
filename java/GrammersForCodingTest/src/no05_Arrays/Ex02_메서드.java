@@ -1,4 +1,4 @@
-package no04_Arrays;
+package no05_Arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

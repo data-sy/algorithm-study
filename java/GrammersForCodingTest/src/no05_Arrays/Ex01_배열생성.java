@@ -1,4 +1,4 @@
-package no04_Arrays;
+package no05_Arrays;
 
 public class Ex01_배열생성 {
 

@@ -1,4 +1,4 @@
-package no07_성능테스트;
+package no08_성능테스트;
 
 public class Ex01_시간관련 {
 

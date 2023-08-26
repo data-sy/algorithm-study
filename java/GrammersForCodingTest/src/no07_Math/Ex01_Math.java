@@ -1,4 +1,4 @@
-package no06_Math;
+package no07_Math;
 
 public class Ex01_Math {
 

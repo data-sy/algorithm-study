@@ -1,4 +1,4 @@
-package no05_Collection;
+package no06_Collection;
 
 
 public class Ex01_컬렉션프레임워크 {

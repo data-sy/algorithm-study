@@ -1,4 +1,4 @@
-package no03_String;
+package no04_String;
 
 public class Ex02_¸Þ¼­µå {
 
