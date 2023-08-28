@@ -19,7 +19,6 @@ public class Ex003_구간합구하기_sol {
 		// int 말고 long
 		// 사이즈를 미리 하나 키워두면 입력받은 수 그대로 index로 쓸 수 있고 start-1도 사용 가능 (index 0 있으니)
 		long[] sumArr = new long[dataNo+1];
-		int sum = 0;
 		for (int i=1; i<dataNo; i++) {
 			sumArr[i] = sumArr[i-1] + Integer.parseInt(st.nextToken());
 		}
