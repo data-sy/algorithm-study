@@ -20,7 +20,8 @@ public class Ex06_Queue {
 		queue.add(1);
 		queue.offer(2);
 		queue.offer(3);
-		System.out.println(queue.poll());  // 3
+		System.out.println(queue.toString());  // 3
+		System.out.println(queue.poll());  // 1
 		System.out.println(queue.peek()); // 2
 		System.out.println(queue.isEmpty()); // Collection의 메서드도 사용 가능 false
 		System.out.println(queue.poll());
