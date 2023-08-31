@@ -20,40 +20,43 @@ public class Ex019_퀵정렬가운데피봇 {
 			// 가운데 : 구현이 더 어렵지만, 정렬된 배열에 그나마 빠름 => 이걸로 알아두자!
 
 		int[] arr = {5, 2, 0, 9, 3, 6, 1, 8, 7, 4};
-		quickSort(arr, 0, arr.length - 1);
+		quickSortM(arr, 0, arr.length - 1);
 	}
 	// 정렬할 배열, s(start, low), e(end, high) 인덱스를 입력받아서
-	private static void quickSort(int[] A, int s, int e) {
+	private static void quickSortM(int[] A, int lo, int hi) {
 			// 기본 단계
-			if(s >= e) {
+			if(lo >= hi) {
 				return;
 			}
 			// 재귀 단계
-			int pivot = partition(A, s, e);			
-			quickSort(A, s, pivot);
-			quickSort(A, pivot + 1, e);
+			int pivot = partition(A, lo, hi);
+			// pivot이 가운데 있으면 hi가 가리키는 위치가 pivot의 위치보다 높으면서 hi가 가리키는 원소가 pivot보다 작은 경우가 생긴다.
+			// 따라서, 파티셔닝을 통해 얻은 pivot까지 포함하여 부분리스트로 나누기
+			quickSortM(A, lo, pivot);
+			quickSortM(A, pivot + 1, hi);
 	}
-	// partitioning의 결과가 pivot이야!
+	// pivot의 위치 반환
 	private static int partition(int[] A, int left, int right) {
 		
-		// s와 e는 각각 배열의 끝에서 1 벗어난 위치부터 시작한다. => why???
-		int s = left - 1;
-		int e = right + 1;
+		// lo와 hi는 각각 배열의 끝에서 1 벗어난 위치부터 시작한다. => why?
+		int lo = left - 1;
+		int hi = right + 1;
 		int pivot = A[(left + right) / 2];		// 부분리스트의 중간 요소를 피벗으로 설정
 		
 		while(true) {
-			// 1 증가시키고 난 뒤의 s 위치의 요소가 pivot보다 큰 요소를 찾을 떄 까지 반복한다.
+			// 1 증가시키고 난 뒤의 lo 위치의 요소가 pivot보다 큰 요소를 찾을 떄 까지 반복한다.
 			do { 
-				s++; 
-			} while(A[s] < pivot);
-			// 1 감소시키고 난 뒤의 e 위치가 s보다 크거나 같은 위치이면서 e위치의 요소가 pivot보다 작은 요소를 찾을 떄 까지 반복한다.
+				lo++; 
+			} while(A[lo] < pivot);
+			// 1 감소시키고 난 뒤의 hi위치의 요소가 pivot보다 작은 요소를 찾을 떄 까지 반복한다. 기본 조건 lo<=hi
 			do {
-				e--;
-			} while(A[e] > pivot && s <= e);
-			// 만약 e가 s보다 크지 않다면(엇갈린다면) swap하지 않고 e를 리턴한다.
-			if(s >= e) {
-				return e;
+				hi--;
+			} while(A[hi] > pivot && lo <= hi);
+			// 만약 hi가 lo보다 크지 않다면(엇갈린다면) swap하지 않고 hi를 리턴한다.
+			if(lo >= hi) {
+				return hi;
 			}
+			swap(A, lo, hi);
 		}
 	}
 	private static void swap(int[] A, int i, int j) {
