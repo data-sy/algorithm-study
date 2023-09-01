@@ -3,7 +3,7 @@ package chapter03_자료구조;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex015_수정렬하기_sol {
+public class Ex015_수정렬하기1_sol {
 	public static void main(String[] args){
 		// n을 대문자로 바꾼거 말고는 없음
 		Scanner sc = new Scanner(System.in);
