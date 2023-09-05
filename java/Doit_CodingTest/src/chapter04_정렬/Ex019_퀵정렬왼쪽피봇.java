@@ -1,4 +1,4 @@
-package chapter03_자료구조;
+package chapter04_정렬;
 
 import java.util.Arrays;
 

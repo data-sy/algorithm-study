@@ -1,4 +1,4 @@
-package chapter03_자료구조;
+package chapter04_정렬;
 
 public class Ex019_퀵정렬관련고찰들 {
 	public static void main(String[] args) {
