@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
 
 public class Ex019_K번째수구하기_sol {
 	public static void main(String[] args) throws IOException {
+		///////////////// 오답이었음. 인덱스 범위 틀림 (정오답 표 참조) ////////////////////
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());

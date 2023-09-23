@@ -1,8 +1,9 @@
-package chapter03_자료구조;
+package chapter04_정렬;
 
 import java.util.Arrays;
 
 public class Ex020_수정렬하기2 {
+	public static int[] A, tmp;
 	public static void main(String[] args) {
 		
 		// 병합정렬 이론
@@ -44,10 +45,10 @@ public class Ex020_수정렬하기2 {
 //		}
 //		return C;
 		
-		// 2차 시도
+		// 2차 시도 (main 밖에 전역변수로 배열 선)
 		int[] test = {4, 5, 2, 6, 3, 9, 1, 0, 7, 8};
 		
-//		mergeSort();
+		mergeSort(0, 9);
 		System.out.println(Arrays.toString(test));			
 	}
 	public static void mergeSort(int s, int e) {
@@ -60,7 +61,16 @@ public class Ex020_수정렬하기2 {
 		mergeSort(m+1, e);
 		
 		// 정렬 수행
-		
+		for (int i=s; i<=e;i++) {
+			tmp[i]=A[i];
+		}
+		int i = s;
+		int j = m+1;
+		int k = s;
+		while(i<=m && j<=e) {
+			if(tmp[i]<tmp[j]) A[k++]=tmp[i++];
+			else A[k++]=tmp[j++];
+		}
 		
 		
 	}
