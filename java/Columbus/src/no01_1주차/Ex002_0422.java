@@ -2,7 +2,7 @@ package no01_1주차;
 
 import java.util.Scanner;
 
-public class Ex002_0422_아스키 {
+public class Ex002_0422 {
 
 	public static void main(String[] args) {	
 		// https://www.acmicpc.net/problem/9046
@@ -35,7 +35,7 @@ public class Ex002_0422_아스키 {
 					maxIndex = j;
 				}				
 			}
-			char ch = (char) (maxIndex + 97); // 97 대신 'a'도 가
+			char ch = (char) (maxIndex + 97); // 97 대신 'a'도 가능 
 			// (중복은 돌리는 도중에는 판단 불가. 최댓값을 확실히 구한 뒤 비교해야 함)
 			for (int j=0; j<26; j++) {
 				if (cntArr[j]==max && j!=maxIndex) ch = '?';

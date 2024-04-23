@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Ex004_0423 {
 
 	public static void main(String[] args) {
+		// https://www.acmicpc.net/problem/1157
 		
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();

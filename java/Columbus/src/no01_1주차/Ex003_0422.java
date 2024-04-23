@@ -9,6 +9,7 @@ import java.io.IOException;
 public class Ex003_0422 {
 
 	public static void main(String[] args) throws IOException{
+		// https://www.acmicpc.net/problem/10798
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

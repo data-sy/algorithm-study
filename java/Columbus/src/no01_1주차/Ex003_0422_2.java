@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class Ex003_0422_sol {
+public class Ex003_0422_2 {
 
 	public static void main(String[] args) throws IOException{
 		

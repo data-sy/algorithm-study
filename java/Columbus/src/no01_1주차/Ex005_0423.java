@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 public class Ex005_0423 {
 
 	public static void main(String[] args) throws IOException {
+		// https://www.acmicpc.net/problem/9996
+			
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		String pattern = br.readLine();
