@@ -8,6 +8,7 @@ public class Ex02_메서드 {
 
 		String str = "Hello World";
 		String str2 = "       Hello    World       ";
+		String str3 = "a:b:c";
 		
 		System.out.println("===== startsWith/endswith : 문자열이 특정 문자로 시작되는지/끝나는지 판별 =====");
 		System.out.println(str.startsWith("H")); // T
@@ -39,17 +40,29 @@ public class Ex02_메서드 {
 		System.out.println("===== replace(A, B) : A를 B로 치환 =====");
 		System.out.println(str.replace("Hello", "Hi")); // Hi World
 		System.out.println(str); // 원래 문자열이 바뀌지는 않음  Hello World
+		System.out.println(str.replaceAll(" ", "")); // HelloWorld
 		System.out.println("===== toLowerCase, toUpperCase  : 소/대문자로 변환 =====");
 		System.out.println(str.toLowerCase());
 		System.out.println(str.toUpperCase());
-		System.out.println("===== trim : 앞 뒤 공백 제거 (내부는 x) =====");
+		System.out.println("===== trim, strip : 앞 뒤 공백 제거 (내부는 x) =====");
 		System.out.println(str2.trim());
+		System.out.println(str2.strip());
+		System.out.println(str2.stripLeading());
+		System.out.println(str2.stripTrailing());
+		
 		
 		System.out.println("===== split(구분자) : 구분자를 기준으로 나눈 것을 배열로 반환 =====");
 		String[] splitStr = str.split(" ");
 		for(int i = 0; i<splitStr.length; i++ ) {
 			System.out.println(splitStr[i]);			
-		}		
+		}
+		String[] splitStr3 = str3.split(":");
+		for(int i = 0; i<splitStr3.length; i++ ) {
+			System.out.println(splitStr3[i]);			
+		}
+		
+		// join 추가하기 
+		
 		System.out.println("===== toCharArray() : String을 char 배열로 반환 =====");
 		// cf. toCharArray는 처리속도가 느려서 charAt을 사용하는 편 (출처 : https://woogienote.tistory.com/22)
 		char[] charArr = str.toCharArray();
@@ -57,6 +70,8 @@ public class Ex02_메서드 {
 		for(char c : charArr ) {
 			System.out.print(c + "//");
 		}
+		
+		// compareTo()
 	}
 
 }
