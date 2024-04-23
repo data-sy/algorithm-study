@@ -1,5 +1,7 @@
 package no04_String;
 
+import java.util.Arrays;
+
 public class Ex02_메서드 {
 
 	public static void main(String[] args) {
@@ -48,7 +50,13 @@ public class Ex02_메서드 {
 		for(int i = 0; i<splitStr.length; i++ ) {
 			System.out.println(splitStr[i]);			
 		}		
-		
+		System.out.println("===== toCharArray() : String을 char 배열로 반환 =====");
+		// cf. toCharArray는 처리속도가 느려서 charAt을 사용하는 편 (출처 : https://woogienote.tistory.com/22)
+		char[] charArr = str.toCharArray();
+		System.out.println(Arrays.toString(charArr));
+		for(char c : charArr ) {
+			System.out.print(c + "//");
+		}
 	}
 
 }
