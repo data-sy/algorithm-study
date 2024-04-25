@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex000_test {
@@ -28,18 +29,38 @@ public class Ex000_test {
 //		System.out.println("b : " + b);
 //		System.out.println("c : " + c);
 		
-		// BufferReader 사용
-		// 입력 데이터 ABCDE
-		// 			abcde
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		StringTokenizer st = new StringTokenizer(br.readLine());
+//		// BufferReader 사용
+//		// 입력 데이터 ABCDE
+//		// 			abcde
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+////		StringTokenizer st = new StringTokenizer(br.readLine());
+//		
+//		String[] arr = new String[2];
+//		for(int i=0; i<2; i++) {
+//			arr[i] = br.readLine();
+//			System.out.println(arr[i]);
+//		}
+
+//		// for문 안에서 i 조작 ok 
+//		for (int i=0; i<10; i++) {
+//			System.out.println(i++);
+//		}
 		
-		String[] arr = new String[2];
-		for(int i=0; i<2; i++) {
-			arr[i] = br.readLine();
-			System.out.println(arr[i]);
-		}
-		
+//		// ++ 붙이는 것
+//		int n = 4;
+//		int i = 2;
+//		int j = 2;
+//		int a = n*i++;
+//		int b = n*(j++);
+//		// 같은 건가봐.
+//		System.out.println(a);
+//		System.out.println(i);
+//		System.out.println(b);
+//		System.out.println(j);
+
+		// 배열 초기값
+		boolean[] arr = new boolean[3];
+		System.out.println(Arrays.toString(arr));
 		
 	}
 
