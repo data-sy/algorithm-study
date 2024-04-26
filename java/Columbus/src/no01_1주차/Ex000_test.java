@@ -58,9 +58,37 @@ public class Ex000_test {
 //		System.out.println(b);
 //		System.out.println(j);
 
-		// 배열 초기값
-		boolean[] arr = new boolean[3];
-		System.out.println(Arrays.toString(arr));
+//		// boolean 배열 초기값 :false
+//		boolean[] arr = new boolean[3];
+//		System.out.println(Arrays.toString(arr));
+		
+//		// 조건을 만족하지 않으면 아얘 for문에 안 들어 가는지 => yes
+//		String str = "ab";
+//		for(int i=2; i<str.length(); i++) System.out.println(i);
+		
+//		// 문자열 곱셈
+//		// 자바는 * 로 문자열 곱셈 못함
+//		// repeat 메서드 사용 (자바11)
+//		String str = "string";
+//		int n = 3;
+////		str = n*"0" + str; // 빨간 줄 
+//		str = "0".repeat(n) + str;
+//		System.out.println(str);
+		
+//		// sb insert 사용
+//		// int 넣어도 알아서 문자열 처리 됨 
+//		StringBuilder sb = new StringBuilder();
+//		int n = 1;
+//		int m = 2;
+//		sb.insert(0, n);
+//		sb.insert(0, m);
+//		System.out.println(sb);
+		
+		int n = 10;
+		int m = 5;
+		n /= m;
+		System.out.println(n);
+		
 		
 	}
 
