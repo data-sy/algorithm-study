@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ex005_0423 {
+public class Ex005_9996 {
 
 	public static void main(String[] args) throws IOException {
 		// https://www.acmicpc.net/problem/9996

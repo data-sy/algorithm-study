@@ -2,7 +2,7 @@ package no01_1주차;
 
 import java.util.Scanner;
 
-public class Ex008_0424 {
+public class Ex008_3613 {
 
 	public static void main(String[] args) {
 		// https://www.acmicpc.net/problem/3613

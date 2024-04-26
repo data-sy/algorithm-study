@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Stack;
 
-public class Ex007_0424_선수문제 {
+public class Ex007_17413_선수문제 {
 
 	public static void main(String[] args) throws IOException  {
 		// https://www.acmicpc.net/problem/9093

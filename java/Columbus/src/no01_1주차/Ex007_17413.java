@@ -3,7 +3,7 @@ package no01_1주차;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Ex007_0424 {
+public class Ex007_17413 {
 
 	public static void main(String[] args)  {
 		// https://www.acmicpc.net/problem/17413

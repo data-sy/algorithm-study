@@ -6,27 +6,28 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class Ex003_0422 {
+public class Ex003_10798_sol {
 
 	public static void main(String[] args) throws IOException{
-		// https://www.acmicpc.net/problem/10798
+		// null은 콘솔창에서 안 보일 뿐 데이터 안에는 들어있어서 계속 틀렸던 것!
+		// https://www.acmicpc.net/board/view/112680
+		// https://www.acmicpc.net/board/view/121271
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		// 조건에서 주어진 최대값 15를 바로 사용하면 max를 찾을 필요 없어
-		char[][] arr = new char[15][5];
+		char[][] arr = new char[5][15];
 		for (int i=0; i<5; i++) {
 			String str = br.readLine();
 			for (int j=0; j<str.length(); j++) {
-				arr[j][i] = str.charAt(j);
+				arr[i][j] = str.charAt(j);
 			}
 		}
-		for (int i=0; i<15; i++) {
-			bw.write(String.valueOf(arr[i]));
-			// chatGPT도 여기서 null인 열은 날린다고 했는데... 아닌가봐..;;
-			// Stirng.valueOf에 대해 더 공부해보기 
-		}
+		for (int j=0; j<15; j++) {
+			for (int i=0; i<5; i++) {
+				if(arr[i][j] == (char) 0) continue;
+				bw.write(String.valueOf(arr[i][j]));		
+		}}
 		
 		bw.flush();
 		

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class Ex010_0425 {
+public class Ex010_20291 {
 
 	public static void main(String[] args) throws IOException {
 		// https://www.acmicpc.net/problem/20291
