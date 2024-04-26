@@ -45,7 +45,7 @@ public class Ex020_수정렬하기2 {
 //		}
 //		return C;
 		
-		// 2차 시도 (main 밖에 전역변수로 배열 선)
+		// 2차 시도 (main 밖에 전역변수로 배열 선언)
 		int[] test = {4, 5, 2, 6, 3, 9, 1, 0, 7, 8};
 		
 		mergeSort(0, 9);

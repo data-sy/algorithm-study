@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 
 public class Ex019_K번째수구하기_sol {
 	public static void main(String[] args) throws IOException {
-		///////////////// 오답이었음. 인덱스 범위 틀림 (정오답 표 참조) ////////////////////
+		// 기존 답안 틀렸었음. 정오답표 참조해서 수정 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -22,6 +22,7 @@ public class Ex019_K번째수구하기_sol {
 		for (int i=0; i<N; i++) {
 			A[i] = Integer.parseInt(st.nextToken());
 		}
+		
 		// K번째 수를 구하므로 기본 퀵정렬에 K번째 수 찾는 것까지 포함
 		quickSort(A, 0, N-1, K-1); 
 		System.out.println(A[K-1]);		
@@ -55,9 +56,10 @@ public class Ex019_K번째수구하기_sol {
 		// s+1 ~ e 까지 partition 돌리기
 		int i = s+1, j = e;
 		while (i<=j) {
-			while (pivot < A[j] && j>0) j--;
-			while (pivot > A[i] && i<A.length-1) i++;
-			if (i<=j) swap(A, i++, j--);
+			while (pivot < A[j] && j>=s+1) j--;
+			while (pivot > A[i] && i<=e) i++;
+			if (i<j) swap(A, i++, j--);
+			else break;
 		}
 		// 왼쪽으로 옮겨놨던 pivot을 다시 구분 자리로 옮기기
 		// i>j 가 된 j 자리는 실제로 pivot보다 작은 애가 들어있으므로 A[j]를 맨 앞인 A[s]로 옮기고

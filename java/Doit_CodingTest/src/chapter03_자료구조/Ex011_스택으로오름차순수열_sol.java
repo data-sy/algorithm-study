@@ -13,7 +13,8 @@ public class Ex011_스택으로오름차순수열_sol {
 			A[i] = sc.nextInt();
 		}
 		
-		// 문제대로 배열이 나오는지 확인하는 방법으로 StringBuffer 사용
+		// 수열을 만들 수 없다면 중간이 +-들 없이 바로 NO만 출력해야 하므로
+		// +- 결과물을 StringBuffer에 넣어뒀다가 성공하면 출
 		StringBuffer sb = new StringBuffer();
 		
 		Stack<Integer> stack = new Stack<>();

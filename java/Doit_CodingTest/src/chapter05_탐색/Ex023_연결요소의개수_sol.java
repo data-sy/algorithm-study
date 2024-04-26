@@ -11,7 +11,6 @@ public class Ex023_연결요소의개수_sol {
 	static boolean[] visited;
 
 	public static void main(String[] args) throws IOException {
-		///////////////틀림... 뭘 잘못 적었을까?////////////
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int N = Integer.parseInt(st.nextToken());
@@ -41,13 +40,13 @@ public class Ex023_연결요소의개수_sol {
 		System.out.println(cnt);
 
 	}
-	public static void DFS(int v) {
+	static void DFS(int v) {
 		if (visited[v]) return;
 		
 		visited[v] = true;
 		for(int i : A[v]) {
 			// 방문하지 않았던 노드만 탐색해야 해
-			if (!visited[v]) DFS(i);
+			if (!visited[i]) DFS(i);
 		}
 		
 	}
