@@ -37,6 +37,8 @@ public class Ex005_9996 {
 				else System.out.println("NE");
 			} else System.out.println("NE");
 		}
+		// 리팩토링) DA, NE 바로 출력이라 for 문 하나로 사용 가능. 굳이 배열에 넣지 않고 
+		// 리팩토링) 메서드 startsWith, endsWith 사용하면 인덱스 에러 신경 쓸 필요 없음 
 		br.close();
 	}
 

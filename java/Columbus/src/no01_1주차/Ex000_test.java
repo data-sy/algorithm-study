@@ -84,11 +84,10 @@ public class Ex000_test {
 //		sb.insert(0, m);
 //		System.out.println(sb);
 		
-		int n = 10;
-		int m = 5;
-		n /= m;
-		System.out.println(n);
-		
+		char[] arrC = new char[5];
+		System.out.println(Arrays.toString(arrC));
+		String[] arrS = new String[5]; 
+		System.out.println(Arrays.toString(arrS));
 		
 	}
 

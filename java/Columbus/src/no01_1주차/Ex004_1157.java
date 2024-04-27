@@ -30,6 +30,7 @@ public class Ex004_1157 {
 		for (int i=0; i<26; i++) {
 			if (arr[i]==max && i!=maxIndex) c = '?';
 		}
+		// 리팩토링) 두 for문을 하나로 합쳐도 돼. else if 조건문으로 추가해서 
 		
 		System.out.println(c);
 		

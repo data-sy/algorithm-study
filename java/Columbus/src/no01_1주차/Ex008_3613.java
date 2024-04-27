@@ -26,8 +26,7 @@ public class Ex008_3613 {
 			// 3차 : 맨 앞, 맨 뒤가 _인 것도 에러처리
 			if (str.startsWith("_") || str.endsWith("_")) {
 				err=errStr;
-			}
-			else {
+			} else {
 				for (int i=0; i<str.length(); i++) {
 					char c = str.charAt(i);
 					if (97<=c && c<=122) sb.append(c);
@@ -71,5 +70,10 @@ public class Ex008_3613 {
 		else System.out.println(err);
 		
 	}
+	
+	// 다른 풀이 : https://pangseyoung.tistory.com/entry/백-Java-vs-C-3613-Java
+	// 점검 조건들을 모두 함수로 만들어서 사용 : C++ 문법 맞는지, Java 문법 맞는지, C++ -> Java, Java -> C++
+	
+	// 리팩토링 : 언더바 2개 있는 것 점검 그냥 contains("__") 쓰면 돼 (27줄)
 
 }

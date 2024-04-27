@@ -9,9 +9,9 @@ public class Ex007_17413 {
 		// https://www.acmicpc.net/problem/17413
 
 		Scanner sc = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder();
 		String str = sc.nextLine()+'.';
 		Stack<Character> stack = new Stack<>();
+		StringBuilder sb = new StringBuilder();
 		
 		// 1차 시도 : '.' 붙이지 않고 진행
 		// 문자로 끝나는 케이스에 java.lang.StringIndexOutOfBoundsExceptio 에러
@@ -28,16 +28,16 @@ public class Ex007_17413 {
 			} else {
 				while(c!=' ' && c!='<' && c!='.') {
 					stack.push(c);
-					c = str.charAt(++i); // '.' 조건 없을 때 여기서 에러 
+					c = str.charAt(++i); // '.' 추가 없을 때 여기서 에러 
 				}
 				while(!stack.isEmpty()) sb.append(stack.pop());
 				if (c==' ')	sb.append(c);
 				else if (c=='<') i--;
 			}
 		}	
-		// 조건에서 안 쓰이는 대문자 A를 마지막에 넣어서 에러 처
 		
 		System.out.println(sb);
 	}
-
+	// 다른 풀이
+	// <, > 의 등장을 T/F로 토글 
 }

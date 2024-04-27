@@ -14,6 +14,10 @@ public class Ex05_Scanner {
         // nextㅇㅇ() 으로 다양하게 읽어 들일 수 있음
         System.out.println(sc.next());
 
+        // nextInt() 메서드는 공백을 구분자로 사용하여 다음 정수를 찾아 반환
+        // 24 18 입력 시
+		int n = sc.nextInt(); // 24
+		int m = sc.nextInt(); // 18
 	}
 
 }

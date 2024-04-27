@@ -57,4 +57,5 @@ public class Ex011_9342 {
 		}
 	}
 
+	// 다른 풀이) 정규표현식 사용 https://nahwasa.com/entry/%EB%B0%B1%EC%A4%80-9342-%EC%9E%90%EB%B0%94-%EC%97%BC%EC%83%89%EC%B2%B4-boj-9342-java
 }

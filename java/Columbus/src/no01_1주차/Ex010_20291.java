@@ -27,4 +27,11 @@ public class Ex010_20291 {
 		map.forEach((k, v) -> System.out.println(k + " " + v));
 	}
 
+	// 리팩토링) 두 for문을 하나로 합쳐도 돼. 입력과 동시에 개수 카운트 
+			// 스트링토크나이저 사용, 스트링 빌더에 넣어서 출력하기
+	
+	// 람다식 관련 설명) https://velog.io/@limhaekyu/Java-람다식Lambda과-람다식을-사용한-forEach
+	
+	// HashMap에 담았다면 키를 추출한 list에 Collections.sort(list);로 정렬 출력 가능 
+
 }

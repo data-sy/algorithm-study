@@ -7,7 +7,7 @@ public class Ex001_11720 {
 	public static void main(String[] args) {
 		// https://www.acmicpc.net/problem/11720
 		
-		// N <=100 . 최대 100자 (double이 16자리까지 가능) => String으로 받
+		// N <=100 . 최대 100자 (double이 16자리까지 가능) => String으로 받기 
 
 		Scanner sc = new Scanner(System.in);
 		

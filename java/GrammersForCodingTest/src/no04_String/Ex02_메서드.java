@@ -41,6 +41,7 @@ public class Ex02_메서드 {
 		System.out.println(str.replace("Hello", "Hi")); // Hi World
 		System.out.println(str); // 원래 문자열이 바뀌지는 않음  Hello World
 		System.out.println(str.replaceAll(" ", "")); // HelloWorld
+		System.out.println("abcdefdef".replaceAll("^abc|def$", ""));
 		System.out.println("===== toLowerCase, toUpperCase  : 소/대문자로 변환 =====");
 		System.out.println(str.toLowerCase());
 		System.out.println(str.toUpperCase());

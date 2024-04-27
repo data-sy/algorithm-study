@@ -36,12 +36,14 @@ public class Ex002_9046 {
 				}				
 			}
 			char ch = (char) (maxIndex + 97); // 97 대신 'a'도 가능 
-			// (중복은 돌리는 도중에는 판단 불가. 최댓값을 확실히 구한 뒤 비교해야 함)
 			for (int j=0; j<26; j++) {
 				if (cntArr[j]==max && j!=maxIndex) ch = '?';
 			}
 			System.out.println(ch);	
 		}
+		
+		// 리팩토링) 두 for문을 하나로 합쳐도 돼. else if 조건문으로 추가해서 
+		
 		sc.close();
 	}
 

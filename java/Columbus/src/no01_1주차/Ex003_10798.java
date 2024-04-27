@@ -1,6 +1,7 @@
 package no01_1주차;
 
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
@@ -24,8 +25,8 @@ public class Ex003_10798 {
 		}
 		for (int i=0; i<15; i++) {
 			bw.write(String.valueOf(arr[i]));
-			// chatGPT도 여기서 null인 열은 날린다고 했는데... 아닌가봐..;;
-			// Stirng.valueOf에 대해 더 공부해보기 
+			// chatGPT도 valueOf는 null인 열은 날린다고 했는데... 아닌가봐..;;
+			// 아! char의 초기값은 null이 아니라 '\u0000' (오답노트에 상세설명)
 		}
 		
 		bw.flush();
