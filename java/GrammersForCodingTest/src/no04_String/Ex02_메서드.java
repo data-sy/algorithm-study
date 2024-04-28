@@ -73,6 +73,32 @@ public class Ex02_메서드 {
 		}
 		
 		// compareTo()
+		System.out.println("===== compareTo() : 크기 비교 결과를 int로 반환 =====");
+		// 숫자형 (Integer) : (a, b)에서 a가 b보다 크다 (1), 같다(0), 작다(-1)
+		Integer x = 2;
+		Integer y = 3;
+		Integer z = 2;
+		System.out.println(x.compareTo(1)); // 1
+		System.out.println(x.compareTo(z)); // 0
+		System.out.println(x.compareTo(y)); // -1
+			// int 사용하려면 compare로 
+		System.out.println(Integer.compare(2, 1)); // 1
+		System.out.println(Integer.compare(1, 1)); // 0
+		System.out.println(Integer.compare(1, 2)); // -1
+		// 문자형
+			// 첫번째 문자부터 순서대로 비교 
+			// 문자가 쭉 같아 (즉, 비교대상에 포함되어 있을 때) : 문자열 길이의 차이값 반환
+				// 즉, 문자열이 완전히 같으면 0 반환 
+        System.out.println( "abcd".compareTo("abcd") );  // 0
+        System.out.println( "abcd".compareTo("ab") );  //  2
+        System.out.println( "abcd".compareTo("a") );  //  3
+        System.out.println( "abcd".compareTo("") );  //  4 
+        	// 문자가 다른 경우 나오면 : 두 char의 아스키코드 값의 차이값 리턴
+        System.out.println( "abcd".compareTo("c") );  //  -2 (a와 c의 아스키 차이값 97-99=-2 리턴)
+        System.out.println( "abcd".compareTo("ac") );  //  -1 (b와 c)
+        System.out.println( "abcd".compareTo("A") );  //  32 (a 97와 A 65) 
+        // 대소문자 무시하고 비교 : compareToIgnorecase()
+    	System.out.println( "a".compareToIgnoreCase("A") );  // 0	 
 	}
 
 }
