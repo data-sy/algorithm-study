@@ -1,4 +1,4 @@
-package no01_1주차;
+package no01;
 
 import java.io.OutputStreamWriter;
 import java.util.Arrays;

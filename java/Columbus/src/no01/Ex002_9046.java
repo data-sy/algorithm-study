@@ -1,4 +1,4 @@
-package no01_1주차;
+package no01;
 
 import java.util.Scanner;
 
@@ -42,7 +42,7 @@ public class Ex002_9046 {
 			System.out.println(ch);	
 		}
 		
-		// 리팩토링) 두 for문을 하나로 합쳐도 돼. else if 조건문으로 추가해서 
+		// 리팩토링) 마지막 두 for문을 하나로 합쳐도 돼. else if 조건문으로 추가해서 
 		
 		sc.close();
 	}

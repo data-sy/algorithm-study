@@ -1,4 +1,4 @@
-package no01_1주차;
+package no01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
