@@ -11,7 +11,8 @@ public class Ex00_Tokenizer사용패턴 {
 		// 0. 문제 상황
 			// 행 - 띄어쓰기, 열 - 엔터로 여러 데이터가 들어올 때
 			// readLine에 한 행의 데이터가 들어가고 nextToken으로 행 안의 원소가 하나씩 빠져나가
-			// 즉, 열의 개수 = readLine 개수 = st 개수 . 한 행에 데이터 개수 = nextToken 개수
+			// 즉, 열의 개수 = readLine 개수 = st 개수
+			   // 한 행에 데이터 개수 = nextToken 개수
 		
 		// 1. 버퍼리더 (1 예외 던지기,  2 입력인자를 차례 차례 넣기)
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
