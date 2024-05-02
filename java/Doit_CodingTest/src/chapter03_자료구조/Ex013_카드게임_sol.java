@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Ex012_카드게임_sol {
+public class Ex013_카드게임_sol {
 	public static void main(String[] args){
 
 		Scanner sc = new Scanner(System.in);
