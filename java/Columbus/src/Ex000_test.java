@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -105,12 +106,18 @@ public class Ex000_test {
 //		sb.append("a\nb\n");
 //		System.out.println(sb);
 		
-		// 비어있을 때 peek => EmptyStackException 에러가 뜸 
-		Stack<Integer> stack = new Stack<>();
-		stack.push(1);
-		stack.pop();
-		System.out.println(stack.peek());
+//		// 비어있을 때 peek => EmptyStackException 에러가 뜸 
+//		Stack<Integer> stack = new Stack<>();
+//		stack.push(1);
+//		stack.pop();
+//		System.out.println(stack.peek());
 		
+		LinkedList<String> list = new LinkedList<>();
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add(2, "d");
+		System.out.println(list);
 		
 	}
 
