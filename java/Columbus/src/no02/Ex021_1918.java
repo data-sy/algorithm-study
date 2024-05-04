@@ -24,35 +24,7 @@ public class Ex021_1918 {
 		
 	}
 	
-	// 괄호 없는 상태로 돌리는 건 만들었는데,,, 흠.. ㅋㅋ 
-
-	static String postfix(String str) {
-		StringBuilder sb = new StringBuilder();
-		if (str.contains("(")) {
-			
-		}
-		else {
-			Deque<String> deque = new LinkedList<>();
-			StringBuilder sb2 = new StringBuilder();
-			// 스택으로 사용 : push, pop 
-			for (int i=0; i<str.length(); i++) {
-				char ch = str.charAt(i);
-				if ( ch==42 || ch==47 ) { // *, / 이면 연산해서 push
-					sb2 = new StringBuilder();
-					sb2.append(deque.pop()).append(str.charAt(++i)).append(String.valueOf(ch));
-					deque.push(sb2.toString());
-				} else deque.push(String.valueOf(ch));
-			}
-			// 큐로 사용 : pollLast 
-			while(!deque.isEmpty()) {
-				String deStr = deque.pollLast();
-				if ( deStr.equals("+") || deStr.equals("-") ) { 
-					sb.append(deque.pollLast()).append(deStr);
-				} else sb.append(deStr);			
-			}		
-			
-		}
-		return sb.toString();
-	}
-	
+	// 괄호 없는 버전에 
+	// 왼쪽 괄호가 나왔을 때의 조건문 추가
+		// 오른쪽 괄호가 나올 때 까지 str을 뽑아서 다시 postfix. 즉, 재귀 
 }

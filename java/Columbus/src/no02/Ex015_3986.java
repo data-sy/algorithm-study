@@ -15,18 +15,19 @@ public class Ex015_3986 {
 		int cnt = 0;
 
 		// () 괄호 문제 + 두 문자 사이에 선후관계는 없도록 (즉, 괄호문제에 비유하면 )가 먼저 나올 수도 있어. 쌍이 중요한 거지 문자 사이에 순서는 없어)
-		// 비어있으면 push
 		// 다르면 push
 		// 같으면 pop
+		// 비어있으면 push
 		
 		for (int i=0; i<N; i++) {
 			String str = br.readLine();
 			Stack<Character> stack = new Stack<>();
 			
-			stack.push(str.charAt(0));
+//			stack.push(str.charAt(0));
 
 			for (int j=1; j<str.length(); j++) {
 				char ch = str.charAt(j);
+				//AABB
 				if (stack.isEmpty()) {
 					stack.push(ch);
 				}
