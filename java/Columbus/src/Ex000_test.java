@@ -3,10 +3,19 @@
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.Deque;
+import java.util.Set;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.Map.Entry;
 import java.util.Stack;
 
 public class Ex000_test {
@@ -112,13 +121,146 @@ public class Ex000_test {
 //		stack.pop();
 //		System.out.println(stack.peek());
 		
-		LinkedList<String> list = new LinkedList<>();
-		list.add("a");
-		list.add("b");
-		list.add("c");
-		list.add(2, "d");
-		System.out.println(list);
+		// LinkedList 인덱스 add
+//		LinkedList<String> list = new LinkedList<>();
+//		list.add("a");
+//		list.add("b");
+//		list.add("c");
+//		list.add(2, "d");
+//		System.out.println(list);
+
+//		// for문 밖에서 선언해도 되는지
+//		int i=0;
+//		for (i=1; i<5; i++) System.out.println(i);
+//		System.out.println(++i);
 		
+//		// "001"은 1로 바뀌는지
+//		String str = "0000201";
+//		int i = Integer.parseInt(str);
+//		System.out.println(i);
+		
+//		// Collections.sort는 사전식 정렬
+//		// "231231", "43"는 첫번째 문자열의 아스키코드를 정렬하므로 "231231"이 "43"보다 앞에 옴 
+//		ArrayList<String> list = new ArrayList<>();
+////		list.add("111");
+////		list.add("005");
+////		list.add("010");
+////		list.add("000");
+//		list.add("231231");
+//		list.add("43");
+//		Collections.sort(list);
+//		for (String str : list) {
+//			System.out.println(str);
+//		}
+		
+//		// EntrySet 자료구조 리턴 형태 맞는지 확인
+//		Map<Integer, String> map = new HashMap<>();
+//		Set<Integer> keySet = map.keySet();
+//		Set<Entry<Integer, String>> entrySet = map.entrySet();		
+//		for (Entry<Integer, String> entry : map.entrySet()) {	
+//			System.out.println(entry.getKey() + " : " + entry.getValue());	
+//		}
+
+		
+		// 내림차순 정렬 
+//		ArrayList<String> list = new ArrayList<>();
+//		Collections.sort(list);
+//		Collections.reverse(list);
+//		Collections.binarySearch(list, "찾고싶은값");
+		// 정렬 안 했을 때로 테스트 (오류는 안 나지만 이상한 값 반환)
+//		list.add("ccc");
+//		list.add("bbb");
+//		list.add("aaa");
+////		Collections.sort(list);
+//		System.out.println(Collections.binarySearch(list, "bbb"));
+	
+//		// TreeMap 메서드
+//		TreeMap<Integer, String> map = new TreeMap<>();
+//		map.put(10, "asdf");
+//		map.put(5, "a3df");
+//		map.put(100, "kkjl");
+//		map.put(2, "a");
+//		SortedMap<Integer, String> toMap = map.headMap(5);;
+//		SortedMap<Integer, String> fromMap = map.tailMap(5);
+//		toMap.forEach((k, v)-> System.out.println("헤드 =>" + k + ":" + v));
+//		fromMap.forEach((k, v)-> System.out.println("테일 =>" + k + ":" + v));
+//		System.out.println(map.firstKey());
+//		System.out.println(map.firstEntry().getKey());
+//		System.out.println(map.pollFirstEntry());
+//		System.out.println(map.firstKey());
+//		System.out.println(map.lastKey());
+//		System.out.println(map.lastEntry().getValue());
+//		System.out.println(map.pollLastEntry());
+//		System.out.println(map.size());
+//		map.headMap(1);
+//		map.tailMap(1);
+		
+		// Deque 실습 => 이거는 나중에 그래머스_no06컬렉션_덱 으로 이동 
+//		Deque<String> deque = new LinkedList<>();
+//		
+//		// 스택으로 생각하면 앞이 push, pop, peek 하는 쪽 
+//
+//		// 데이터 추가 
+//		// 용량 초과 시 : add 예외 발생, offer F 리턴 
+//		// 앞 
+//		deque.push(null);
+//		deque.addFirst(null);
+//		deque.offerFirst(null);
+//		// 뒤
+//		deque.add(null);
+//		deque.offer(null);
+//		deque.addLast(null);
+//		deque.offerLast(null);
+//		
+//		// 데이터 삭제 (해당 데이터 리턴)
+//		// 비어있을 시 : remove 예외 발생, poll null 리턴 
+//		// 앞 
+//		deque.pop();
+//		deque.element();
+//		deque.remove();
+//		deque.poll();
+//		deque.removeFirst();
+//		deque.pollFirst();
+//		// 뒤
+//		deque.removeLast();
+//		deque.pollLast();
+//		
+//		// 데이터 확인  
+//		// 앞
+//		deque.peek();
+//		deque.peekFirst();
+//		deque.getFirst();
+//		// 뒤
+//		deque.peekLast();
+//		deque.getLast();
+//		
+//		// 탐색하여 나오는 첫 데이터를 제거
+//		// 앞에서부터 탐색
+//		deque.remove("제거할값");
+//		deque.removeFirstOccurrence("제거할값");		
+//		// 뒤에서부터 탐색 
+//		deque.removeLastOccurrence("제거할값");
+//		
+//		// 데이터가 존재하는지 확인
+//		deque.contains("확인할값");
+//		
+//		
+//		// 순회
+//		// for문
+//		deque.forEach(e -> System.out.println(e));
+//		for (String elem : deque) {
+//			  System.out.println(elem);
+//		}
+//		
+//		// 실습 		
+//		deque.add("1번 ");
+//		deque.add("2번 ");
+//		deque.addFirst("3번 ");
+////		deque.push("3번 ");
+//		deque.forEach(e-> System.out.println(e));
+		
+		
+	
 	}
 
 }

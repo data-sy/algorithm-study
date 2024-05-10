@@ -8,43 +8,56 @@ public class Ex013_2004_2 {
 		// https://www.acmicpc.net/problem/1373
 	
 		Scanner sc = new Scanner(System.in);
-		
-		// int 범위 : -2,147,483,648 ~ 2,147,483,647
-		// 문제 조건 N<=2,000,000,000 이므로 int에 넣는 것 OK 
 		int N = sc.nextInt();
 		int M = sc.nextInt();
 		
+		// N=dn, M=dm 에 대하여, NCM=nCm => XXXXXXX
+		// 너무 당연한건디 왜 이렇게 생각했지???ㅋㅋㅋ
+		// (dn)! ≠ d^n(n!)
+//		// 최대공약수
+//		int gcd = N;
+//		int b = M;
+//		while(b!=0) {
+//			int r = gcd%b;
+//			gcd = b;
+//			b = r;
+//		}
+//		N /= gcd;
+//		M /= gcd;
+		
 		// nCm = nCn-m
 		if (N/2<M) M = N-M;
-	
-		// 조합 수식에서의 개수 
-		// cnt1 : 1 ~ N
-		// cnt2 : 1 ~ N-M
-		// cnt3 : 1 ~ M
-		// 분자에서의 개수 - 분모에서의 개수 = (cnt1 - cnt2) - cnt3
 		
-		// 2의 개수, 5의 개수 사이에 대소 관계는 없으므로 둘 다 구해주기 
-		// 8C1 -> 2만 3개 , 25C1 -> 5만 2개 
-		
-		// 1차 시도 : (2000000000, 1)를 넣으면 / by zero 에러가 나
-		// 아! 마지막에 div*=2가 int를 넘어가버려 => div를 long으로 
-		int cnt2 = 0;
-		for (long div=2; div<=N; div*=2) cnt2+= N/div;
-		for (long div=2; div<=N-M; div*=2) cnt2-=(N-M)/div;
-		System.out.println("분자 2 : " + cnt2);
-		for (long div=2; div<=M; div*=2) cnt2-=M/div;
-		int cnt5 = 0;
-		for (long div=5; div<=N; div*=5) cnt5+=N/div;
-		for (long div=5; div<=N-M; div*=5) cnt5-=(N-M)/div;
-		System.out.println("분자 5 : " + cnt5);
-		for (long div=5; div<=M; div*=5) cnt5-=M/div;
-		
-		System.out.println(cnt2);
-		System.out.println(cnt5);
-		System.out.println( cnt2<cnt5 ? cnt2 : cnt5);
-		
+		// 조합 : 2의 배수, 5의 배수만 
+		// 2차 시도 : !곱셈이라 숫자가 커서 int에 담기 부족.. %10 연산 할 거라 double 사용도 x
+		// 결국 이 안에서 while로 갯수 세주는 걸로 알고리즘 바꾸어야 할 듯!
+		int num = 1; // 분자 
+		int denom = 1; // 분모 
+		for (int i=1; i<=M; i++) {
+			if (N%2==0 || N%5==0) num*=N;
+			N--;
+			if (i%2==0 || i%5==0) denom*=i;
+		}
+		System.out.println(num);
+		System.out.println(denom);
+
+//		// 1차 시도 : 아얘 계산을 해버리면 안 곱한 원소들이 있어서 안 맞아 
+//		int combi = num/denom;
+//		int cnt = 1;
+//		while(combi%10==0) cnt++;
+		// 따라서 분자, 분모 각각 끝자리 0 개수 찾아서 빼기 
+
+		int cntNum = 0;
+		int cntDenom = 0;
+		while(num%10==0) {
+			cntNum++;
+			num%=10;
+			if (denom%10==0) {
+				cntDenom++;
+				denom%=10;
+			}
+		}
+		System.out.println(cntNum-cntDenom);
 	}
-	
-	// 리팩토링) 지수 구하는 방법이 반복되므로 함수로 처리 
 
 }
