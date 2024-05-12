@@ -17,7 +17,7 @@ public class Ex042_14425_set {
 		// 3. list.contains
 		// 2>1>>>>3
 		// 의외로 set보다 map이 빠르네? 근데 아~주 근소한 차이이긴 해
-		// list는 시간이 6.5배 (1,2는 400ms, 3은 2660ms)
+		// list는 엄청 느려 (1,2는 400ms, 3은 2660ms)
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();

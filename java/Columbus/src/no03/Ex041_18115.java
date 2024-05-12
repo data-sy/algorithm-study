@@ -22,6 +22,7 @@ public class Ex041_18115 {
 		for (int i=N-1; i>=0; i--) {
 			arr[i] = st.nextToken();
 		}
+		// 1 2 3 3 2
 		
 		// Deque는 인덱스 지정 add는 사용 못해
 //		Deque<String> deque = new LinkedList<>();

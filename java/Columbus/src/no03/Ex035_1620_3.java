@@ -11,9 +11,6 @@ public class Ex035_1620_3 {
 
 	public static void main(String[] args) throws IOException {
 		//https://www.acmicpc.net/problem/1620
-
-		// 1. 지금 풀이
-		// 2. 배열에 담았더니 시간 초과 (아! 그래서 자료구조를 사용하는구나!)
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());

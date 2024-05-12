@@ -50,5 +50,6 @@ public class Ex035_1620 {
 		}
 	}
 
+	// 앞글자가 문자인지 숫자인지 보고
 	// 들어오는 숫자도 String 처리 해버리면 한 map에서 관리 가능 map<String, String>
 }
