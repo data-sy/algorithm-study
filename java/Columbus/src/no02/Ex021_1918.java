@@ -15,16 +15,48 @@ public class Ex021_1918 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
 		
-		// 우선 괄호 없이 +-*/ 연산은
-			// */을 한 덩어리로 처리하면서 스택에 쌓고
-			// +-를 큐로 추출 
-		// 괄호가 있으면 그 괄호 안의 문자열을 postfix
-		
-		
+		// 쭉 스택에 쌓다가 ) 가 나오면 스택에서 (가 나올 때 까지 pop 해서 
+		// 모은 것을 postfix
+		LinkedList<String> stack = new LinkedList<>();
+		for (int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if (ch==')') {
+				LinkedList<String> list = new LinkedList<>();
+				String check = stack.pollLast();					
+				while (!check.equals("(")) {
+					list.addFirst(check);
+					check = stack.pollLast();
+				}
+				stack.add(postfix(list));
+			} else stack.add(String.valueOf(ch));
+		}
+		// 이제 괄호 부분은 다 후위로 바꾼 상태니까 여기에 postfix
+		System.out.println(postfix(stack));
 		
 	}
 	
-	// 괄호 없는 버전에 
-	// 왼쪽 괄호가 나왔을 때의 조건문 추가
-		// 오른쪽 괄호가 나올 때 까지 str을 뽑아서 다시 postfix. 즉, 재귀 
+	// 괄호 없는 버전의 중위 -> 후위
+	static String postfix(LinkedList<String> list) {
+		StringBuilder sb = new StringBuilder();
+		StringBuilder sb2 = new StringBuilder();
+		Deque<String> deque = new LinkedList();
+
+		// */ 연산 큐로 돌리면서 처리
+		while(!list.isEmpty()) {
+			String str = list.poll();
+			if ( str.equals("*") || str.equals("/") ) {
+				sb2.setLength(0);
+				sb2.append(deque.pollLast()).append(list.poll()).append(str);
+				deque.add(sb2.toString());
+			} else deque.add(str);
+		}
+		// +- 연산 큐로 돌리면서 처리
+		while(!deque.isEmpty()) {
+			String deStr = deque.poll();
+			if ( deStr.equals("+") || deStr.equals("-") ) { 
+				sb.append(deque.poll()).append(deStr);
+			} else sb.append(deStr);			
+		}
+		return sb.toString();
+	}
 }
