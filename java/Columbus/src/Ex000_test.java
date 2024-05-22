@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.Arrays;
@@ -259,8 +260,41 @@ public class Ex000_test {
 ////		deque.push("3번 ");
 //		deque.forEach(e-> System.out.println(e));
 		
+//		// String.format 반올림 테스트 => OK
+//		System.out.println(String.format("%.4f", 3.777777));
 		
-	
+//		int[] arr = {1, 2, 3};
+		
+//		// 반례 개수 세기
+//        int[] numbers = {
+//                36, 58, 169, 78, 30, 97, 23, 115, 105, 102,
+//                35, 106, 57, 91, 110, 81, 193, 68, 191, 74,
+//                164, 38, 33, 129, 40, 131, 77, 124, 74, 119
+//            };
+//
+//        // 각 숫자의 개수를 저장할 HashMap 생성
+//        Map<Integer, Integer> countMap = new HashMap<>();
+//
+//        // 숫자 배열을 순회하면서 각 숫자의 개수를 세기
+//        for (int number : numbers) {
+//        	countMap.put(number, countMap.getOrDefault(number, 0)+1);
+//        }
+//
+//        // 결과 출력
+//        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+//            System.out.println(entry.getKey() + ": " + entry.getValue());
+//            if(entry.getValue()==203) System.out.println("쿠키 있어");
+//        }
+
+        // 빅인트 연산
+        BigInteger a = new BigInteger("0");
+        int cost = 10;
+        int d = 50;
+        BigInteger tmp = BigInteger.valueOf(cost).multiply(BigInteger.valueOf(d));
+        System.out.println(a.add(tmp));
+        System.out.println(a.multiply(tmp));
+
+
 	}
 
 }

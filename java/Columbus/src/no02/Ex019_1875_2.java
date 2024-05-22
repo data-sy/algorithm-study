@@ -5,13 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Ex019_1874 {
+public class Ex019_1875_2 {
 
 	public static void main(String[] args) throws IOException{
 		//https://www.acmicpc.net/problem/10769
 		
-		// 1. 2를 좀 더 정돈한 것 
-		// 2. 처음에 푼 지저분한 코드 
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
@@ -37,8 +35,10 @@ public class Ex019_1874 {
 				sb.append("-\n");
 			} else { // target<num
 				// 만약 팝 한게 타겟이랑 안 맞다면?! 불가능한 경우야.
-				if (target == stack.pop()) sb.append("-\n");
-				else {
+				int tmp = stack.pop();
+				if (target == tmp) {
+					sb.append("-\n");
+				} else {
 					isPoss=false;
 					break;
 				}

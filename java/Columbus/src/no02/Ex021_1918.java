@@ -11,7 +11,7 @@ public class Ex021_1918 {
 	public static void main(String[] args) throws IOException{
 		//https://www.acmicpc.net/problem/1918
 		
-		// 덱 사용 	
+		// 덱 사용
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
 		
