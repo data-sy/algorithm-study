@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class Ex048_14916 {
 	
 	public static void main(String[] args) throws IOException  {
-		// https://www.acmicpc.net/problem/11047
+		// https://www.acmicpc.net/problem/14916
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
