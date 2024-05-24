@@ -1,11 +1,11 @@
 package no04;
 
-import java.io.IOException;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex045_2559 {
+public class Ex045_2559_부분합 {
 
 	public static void main(String[] args) throws IOException  {
 		// https://www.acmicpc.net/problem/2559
@@ -29,15 +29,15 @@ public class Ex045_2559 {
 		// 수정 : 배열의 합 sum을 계속 찾고, 그게 max보다 크면 max를 sum으로 갱신 
 
 		int[] arr = new int[N];
-		int sum = 0;
+		int max = 0;
 
 		for (int i=0; i<N; i++) {
 			int tmp = Integer.parseInt(st.nextToken());
 			arr[i] = tmp;
-			if (i<K) sum+=tmp;
+			if (i<K) max+=tmp;
 		}
 
-		int max = sum;
+		int sum = max;
 		for (int i=0; i+K<N; i++) {
 			sum += arr[i+K] - arr[i];
 			if (max<sum) max = sum;
