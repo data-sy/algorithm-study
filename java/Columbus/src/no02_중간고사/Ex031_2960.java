@@ -1,4 +1,4 @@
-package 중간고사;
+package no02_중간고사;
 
 import java.util.Scanner;
 

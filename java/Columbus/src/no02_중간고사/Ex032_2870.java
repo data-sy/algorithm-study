@@ -1,9 +1,9 @@
-package 중간고사;
+package no02_중간고사;
 
 import java.io.BufferedReader;
-import java.math.BigInteger;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 

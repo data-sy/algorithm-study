@@ -1,5 +1,4 @@
-package 중간고사;
-
+package no02_중간고사;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
