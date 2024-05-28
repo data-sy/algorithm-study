@@ -1,4 +1,4 @@
-package 기말고사;
+package no04_기말고사;
 
 import java.io.BufferedReader;
 import java.io.IOException;
