@@ -1,11 +1,9 @@
 package no05;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashSet;
 
-public class Ex013_순열재귀로 {
+public class Ex000_013_순열재귀로 {
 
     static String[] arr;
     static int N;
