@@ -9,7 +9,7 @@ public class Ex005_2231 {
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/2231
 
-        // 이 전 문제는 3개를 선택하는 거라 개수가 고정됐으니 3차 for문 쓰면 됐는데,
+        // 이 전 문제는 3개를 선택하는 거라 개수가 고정됐으니 3중 for문 쓰면 됐는데,
         // 이 문제는 길이가 고정되지 않았어 => 재귀
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -19,6 +19,7 @@ public class Ex006_15721_2_틀림 {
             // 그 바퀴에서의 T의 위치 찾을 수 있고
             // 그 인덱스를 A로 나누면 순회해서 해당 위치 찾을 수 있음
         // 2프로에서 틀림 ㅜㅠ
+            // 인덱스 처리에서 잘못된 곳이 있었음!
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int A = Integer.parseInt(br.readLine());

@@ -18,7 +18,7 @@ public class Ex006_15721_2 {
             // i-1의 값(=i-1까지의 누적합)을 T에서 빼고 나면
             // 그 바퀴에서의 T의 위치 찾을 수 있고
             // 그 인덱스를 A로 나누면 순회해서 해당 위치 찾을 수 있음
-        // 2프로에서 틀림 ㅜㅠ
+        // 손필기로 설명 추가하기
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int A = Integer.parseInt(br.readLine());
@@ -35,10 +35,7 @@ public class Ex006_15721_2 {
         // 마지막 누적
         int last = 0;
         if (list.size()>0) last = list.get(list.size()-1);
-//        System.out.println("리스트 사이즈 : " + list.size());
-//        System.out.println(last);
         int index = T-last-1;
-//        System.out.println(index);
 
         // word에 따라 인덱스 주기
         if (word==0){
@@ -49,7 +46,6 @@ public class Ex006_15721_2 {
             else index +=(list.size()+4);
         }
         index +=2*last;
-//        System.out.println(index);
 
         System.out.println((index)%A);
 

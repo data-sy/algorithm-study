@@ -4,25 +4,13 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
-import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Deque;
-import java.util.Set;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.SortedMap;
-import java.util.TreeMap;
 import java.util.Map.Entry;
-import java.util.Stack;
+import java.util.TreeSet;
 
 public class Ex000_test {
 	
 	public static void main(String[] args) throws IOException {
-		
+
 		// 아스키코드로 알파벳 세기 테스트 : char - 97 
 //		String str = "abczyx";
 //		for (int i=0; i<str.length(); i++) {
@@ -286,14 +274,49 @@ public class Ex000_test {
 //            if(entry.getValue()==203) System.out.println("쿠키 있어");
 //        }
 
-        // 빅인트 연산
-        BigInteger a = new BigInteger("0");
-        int cost = 10;
-        int d = 50;
-        BigInteger tmp = BigInteger.valueOf(cost).multiply(BigInteger.valueOf(d));
-        System.out.println(a.add(tmp));
-        System.out.println(a.multiply(tmp));
+//        // 빅인트 연산
+//        BigInteger a = new BigInteger("0");
+//        int cost = 10;
+//        int d = 50;
+//        BigInteger tmp = BigInteger.valueOf(cost).multiply(BigInteger.valueOf(d));
+//        System.out.println(a.add(tmp));
+//        System.out.println(a.multiply(tmp));
 
+//        // 00 ~ 59 안에 3의 개수
+//        int cnt=0;
+//        for (int i=0; i<60 ; i++){
+//            if (Integer.toString(i).contains("3")) cnt++;
+//        }
+//        System.out.println(cnt);
+
+//        // TreeSet의 ceiling, floor 사용
+//        TreeSet<Integer> set = new TreeSet<>();
+//        set.add(1);
+//        set.add(5);
+//        set.add(10);
+//        System.out.println(set.ceiling(7)); // 10
+//        System.out.println(set.floor(7)); // 5
+//
+//        // 내림차순 정렬일 때
+//        TreeSet<Integer> set2 = new TreeSet<>(Collections.reverseOrder());
+//        set2.add(1);
+//        set2.add(5);
+//        set2.add(10);
+//        System.out.println(set2.ceiling(7)); // 5
+//        System.out.println(set2.floor(7)); // 10
+
+//            // 50000의 sqrt
+//            System.out.println(Math.sqrt(50000));
+
+//		// 음수 int 나누기 => 잘 됨!!
+//		int a = 1;
+//		int b = 3;
+//		int c = -1;
+//		int d = 4;
+//		int e = 1;
+//		int f = 7;
+//		int num = (a*f-c*d)/(a*e-b*d);
+//		System.out.println(num);
 
 	}
 
