@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex007_18312_2_N조건없는버전 {
+public class Ex007_18312_시각_2포함배제_N조건없는버전 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/18312

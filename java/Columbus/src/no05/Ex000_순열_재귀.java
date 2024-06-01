@@ -3,7 +3,7 @@ package no05;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class Ex000_013_순열재귀로 {
+public class Ex000_순열_재귀 {
 
     static String[] arr;
     static int N;
@@ -54,7 +54,6 @@ public class Ex000_013_순열재귀로 {
             permutation(k+1, sb);
             sb.setLength(sb.length()-1);
             visited[i] = false;
-
         }
     }
 }

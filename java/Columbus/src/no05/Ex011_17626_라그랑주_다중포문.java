@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ex011_17626 {
+public class Ex011_17626_라그랑주_다중포문 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/17626

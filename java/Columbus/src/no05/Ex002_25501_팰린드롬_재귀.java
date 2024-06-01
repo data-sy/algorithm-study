@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ex002_25501 {
+public class Ex002_25501_팰린드롬_재귀 {
 
     static int cnt;
 

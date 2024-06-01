@@ -3,9 +3,8 @@ package no05;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-public class Ex003_4779 {
+public class Ex003_4779_칸토어_재귀 {
 
     static char[] chars;
 

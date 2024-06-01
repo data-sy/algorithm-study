@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex007_18312_2 {
+public class Ex007_18312_시각_2포함배제 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/18312
@@ -30,7 +30,7 @@ public class Ex007_18312_2 {
         int min = Integer.parseInt(K)<6 ? 15 : 6;
         int sec = min;
 
-        // 포함배제 원리로
+        // "포함배제 원리"로
         // + 시 + 분 + 초 - 시∩분 - 분∩초 - 시∩초 + 시∩분∩초
         int hourCnt = hour*60*60;
         int minCnt = (N+1)*min*60;

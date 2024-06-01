@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 
-public class Ex000_009_중복순열재귀로 {
+public class Ex000_중복순열_재귀 {
 
     static String[] arr;
     static int N;

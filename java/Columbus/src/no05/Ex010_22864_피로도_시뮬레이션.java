@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex010_22864 {
+public class Ex010_22864_피로도_시뮬레이션 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/22864

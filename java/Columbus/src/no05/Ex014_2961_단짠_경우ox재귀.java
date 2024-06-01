@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex014_2961 {
+public class Ex014_2961_단짠_경우ox재귀 {
 
     static int N;
     static long[][] arr;

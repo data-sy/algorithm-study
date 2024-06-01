@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-public class Ex000_009_부분집합재귀로 {
+public class Ex000_부분집합_재귀 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/18511

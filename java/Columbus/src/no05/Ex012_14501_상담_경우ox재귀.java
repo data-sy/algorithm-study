@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex012_14501 {
+public class Ex012_14501_상담_경우ox재귀 {
 
     static int N;
     static int[] T;

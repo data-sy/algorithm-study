@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-public class Ex009_18511_2_완전탐색 {
+public class Ex009_18511_큰수구성_2N다중포문 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/18511

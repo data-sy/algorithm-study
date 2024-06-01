@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex008_19532_2 {
+public class Ex008_19532_연립방정식_2다중포문 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/19532

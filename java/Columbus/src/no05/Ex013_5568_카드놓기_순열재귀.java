@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
-public class Ex013_5568 {
+public class Ex013_5568_카드놓기_순열재귀 {
 
     static String[] arr;
     static int n;

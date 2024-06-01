@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Ex006_15721_2 {
+public class Ex006_15721_뻔데기_2인덱스계산 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/25721

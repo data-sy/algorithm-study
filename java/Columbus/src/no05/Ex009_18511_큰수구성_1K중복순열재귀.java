@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Ex009_18511 {
+public class Ex009_18511_큰수구성_1K중복순열재귀 {
 
     static long N;
     static int lenN;
@@ -52,7 +52,7 @@ public class Ex009_18511 {
         str = Integer.toString(arr[0]).repeat(lenN);
         if (N<Long.parseLong(str)) max = Long.parseLong(Integer.toString(arr[K-1]).repeat(lenN-1));
         else { // N보다 작으면
-            // 이 값을 max로 초기화 하고 --- Q. 필요한 작업일까?
+            // 이 값을 max로 초기화 하고
             max = Long.parseLong(str);
             // K로 완전탐색 해서 N자리만큼 만들어서 max 갱신
             recur(0, sb);

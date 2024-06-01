@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
-public class Ex009_18511_틀림 {
+public class Ex009_18511_큰수구성_3treeset_틀림 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/18511
