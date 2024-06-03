@@ -15,7 +15,8 @@ public class Ex050_1343 {
 		
 		int cnt=0;
 		Boolean isPoli = true;
-		
+
+		// while
 		if (str.contains("X")) {
 			for(int i=0; i<str.length(); i++) {
 				cnt=0;

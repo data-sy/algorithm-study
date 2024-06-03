@@ -17,10 +17,10 @@ public class Ex053_13305_long {
 		for (int i=0; i<N-1; i++){
 			dArr[i] = Long.parseLong(st.nextToken());
 		}
-		dArr[N-1] = 0;
+		// dArr[N-1] 는 0으로 초기화 되어 있겠지
 		st = new StringTokenizer(br.readLine());
 		long[] cArr = new long[N];
-		for (int i=0; i<N; i++){
+		for (int i=0; i<N-1; i++){
 			cArr[i] = Long.parseLong(st.nextToken());
 		}
 		cArr[N-1] = -1;
