@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Ex017_6603_로또 {
+public class Ex017_6603_로또_조합재귀 {
 
     static int k;
     static String[] arr;

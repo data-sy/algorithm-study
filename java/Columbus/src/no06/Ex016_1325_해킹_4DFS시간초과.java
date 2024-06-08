@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class Ex016_1325_시간초과 {
+public class Ex016_1325_해킹_4DFS시간초과 {
 
     static ArrayList<Integer>[] adjList;
     static boolean[] visited;
