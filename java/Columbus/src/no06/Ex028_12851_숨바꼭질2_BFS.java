@@ -27,15 +27,15 @@ public class Ex028_12851_숨바꼭질2_BFS {
         int N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
-        if (N==K) {
+        if (N==K) { // N==K일 때는 반복문 돌릴 필요 없이 바로 0초, 1개
             System.out.println(0);
             System.out.println(1);
         } else {
-            visited = new int[100003];
+            visited = new int[100001];
 
             q = new ArrayDeque<>();
             q.add(N);
-            visited[N]=1;
+            visited[N]=1; // "방문하지 않음 = 0"과 구별하기 위해 1초에서 시작 (맨 마지막에 -1초 해주면 돼)
 
             int next = 0;
             while(!q.isEmpty()) {
@@ -59,8 +59,8 @@ public class Ex028_12851_숨바꼭질2_BFS {
                 }
                 // -
                 next = now - 1;
-                if (!isFind) bfsAdd(next);
-                else if (next==K) cnt++;
+                if (!isFind) bfsAdd(next);  // 찾기 전에는 bfs
+                else if (next==K) cnt++;    // 찾은 후에는 개수 세기
                 // +
                 next = now + 1;
                 if (!isFind) bfsAdd(next);
@@ -86,10 +86,11 @@ public class Ex028_12851_숨바꼭질2_BFS {
             return;
         }
         // 범위를 벗어나면 리턴
-        if ( N<0 || 100002< N ) return;
-        if ( visited[N]==0 ) {
+        if ( N<0 || 100000< N ) return;
+        if ( visited[N]==0 ) { // 기존 BFS
             q.add(N);
             visited[N] = visited[now]+1;
+            // 방문했더라도 같은 층위라면 큐에 add
         } else if (visited[N] == visited[now]+1) q.add(N);
     }
 

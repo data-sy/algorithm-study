@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ex022_14675_단절_2간선개수배열 {
+public class Ex023_14675_단절_2간선개수배열 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/14675

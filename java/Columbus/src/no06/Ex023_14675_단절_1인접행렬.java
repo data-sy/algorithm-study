@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Ex022_14675_단절_1인접행렬 {
+public class Ex023_14675_단절_1인접행렬 {
     static ArrayList<Integer>[] adjList;
     static int[][] edgeArr;
 

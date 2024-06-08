@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Ex021_11725_트리부모_배열 {
+public class Ex022_11725_트리부모_인접행렬 {
     static int N;
     static ArrayList<Integer>[] adjList;
     static boolean[] visited;
