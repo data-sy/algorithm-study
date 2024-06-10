@@ -20,7 +20,7 @@ public class Ex005_2231_분해합_재귀 {
         int result = recur(N, 0, powN, 0);
         System.out.println(result);
     }
-    static int recur(int N, int sum, int pow, int num){
+    static int recur(int N, int sum, int pow, int num){ // sum : N이랑 같은지 비교할 누적합 , num : 생성자
         if (sum==N) return num;
         if (pow<0) return 0;
 

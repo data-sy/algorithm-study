@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.TreeSet;
 
@@ -291,15 +293,23 @@ public class Ex000_test {
 
 //        // TreeSet의 ceiling, floor 사용
 //        TreeSet<Integer> set = new TreeSet<>();
-//        set.add(1);
+//        set.add(2);
 //        set.add(5);
 //        set.add(10);
-//        System.out.println(set.ceiling(7)); // 10
-//        System.out.println(set.floor(7)); // 5
+//		// floor : 자기 자신보다 작거나 같은 원소
+//		System.out.println(set.floor(5)); // 5
+//		System.out.println(set.floor(7)); // 5
+//			// 없으면 null 반환
+//		System.out.println(set.floor(1)); // null
+//		// ceiling : 자기 자신보다 크거나 같은 원소
+//		System.out.println(set.ceiling(5)); // 5
+//		System.out.println(set.ceiling(7)); // 10
+//			// 없으면 null 반환
+//		System.out.println(set.ceiling(15)); // null
 //
 //        // 내림차순 정렬일 때
 //        TreeSet<Integer> set2 = new TreeSet<>(Collections.reverseOrder());
-//        set2.add(1);
+//        set2.add(2);
 //        set2.add(5);
 //        set2.add(10);
 //        System.out.println(set2.ceiling(7)); // 5
@@ -317,6 +327,26 @@ public class Ex000_test {
 //		int f = 7;
 //		int num = (a*f-c*d)/(a*e-b*d);
 //		System.out.println(num);
+
+
+        // 배열을 String으로 넣었을 때 key가 될 수 있는지 => yes!
+        HashMap<String, Integer> map = new HashMap<>();
+        int[] arr1 = new int[] {1, 2};
+        int[] arr2 = new int[] {3, 7};
+        int[] arr3 = new int[] {5, 3};
+        int[] arr4 = new int[] {6, 2};
+        int[] arr5 = new int[] {7, 9};
+
+        map.put(arr1.toString(), 1);
+        map.put(arr2.toString(), 2);
+        map.put(arr3.toString(), 3);
+        map.put(arr4.toString(), 4);
+        map.put(arr5.toString(), 5);
+
+        System.out.println(map.getOrDefault(arr3.toString(), 0));
+        // 같은 값을 가져도 새롭게 생성되면 다른 원소
+        System.out.println(map.getOrDefault(new int[] {5, 3}, 0));
+
 
 	}
 

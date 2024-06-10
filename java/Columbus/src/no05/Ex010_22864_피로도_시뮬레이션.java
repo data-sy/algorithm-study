@@ -11,7 +11,7 @@ public class Ex010_22864_피로도_시뮬레이션 {
         // https://www.acmicpc.net/problem/22864
 
         // 75%에서 틀림 => 개선 : hour의 초기값을 0으로
-        // 80%에서 틀림 => 개선 : while(hour<24) 으로 (기존에는 등호를 넣어버렸어. 그러면 24시일 때도 돌아가는 거잖아.안돼!)
+        // 80%에서 틀림 => 개선 : while(hour<24) 으로 (기존에는 등호를 넣어버렸어. 그러면 24시일 때도 돌아가는 거잖아. 안 돼!)
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
