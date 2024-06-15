@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
-public class Ex034_1600_원숭이_BFS {
+public class Ex034_1600_원숭이_BFS_실패 {
     static int K, W, H;
     static int[][] map;
     static boolean[][] visited;
@@ -18,9 +18,6 @@ public class Ex034_1600_원숭이_BFS {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/1600
-
-        // k번을 조합으로 선택해야 해!
-
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         K = Integer.parseInt(br.readLine());

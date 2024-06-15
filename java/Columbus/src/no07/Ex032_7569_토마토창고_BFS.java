@@ -38,7 +38,7 @@ public class Ex032_7569_토마토창고_BFS {
                 for (int x=0; x<M; x++) {
                     int tmp = Integer.parseInt(st.nextToken());
                     tomatoBox[z][y][x] = tmp;
-                    if (tmp!=0) {
+                    if (tmp!=0) { // 즉, 1과 -1일 때
                         visited[z][y][x] = true;
                         cntVisited++;
                         if (tmp==1) q.add(new int[]{z, y, x});
