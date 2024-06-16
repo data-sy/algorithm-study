@@ -44,7 +44,6 @@ public class Ex034_1600_원숭이_시도한아이디어들 {
         H = Integer.parseInt(st.nextToken());
 
         map = new int[H][W];
-        visited = new boolean[H][W];
         for (int y=0; y<H; y++) {
             st = new StringTokenizer(br.readLine());
             for (int x=0; x<W; x++) {
@@ -58,6 +57,8 @@ public class Ex034_1600_원숭이_시도한아이디어들 {
 //            }
 //            System.out.println();
 //        }
+
+        visited = new boolean[H][W];
         result = -1;
         bfs(0, 0);
         System.out.println(result);
@@ -80,6 +81,7 @@ public class Ex034_1600_원숭이_시도한아이디어들 {
             }
 
             if (K>0) {
+                // 말의 이동
                 for (int d=0; d<8; d++) {
                     int ny = y + d2y[d];
                     int nx = x + d2x[d];
@@ -90,6 +92,7 @@ public class Ex034_1600_원숭이_시도한아이디어들 {
                 }
                 K--;
             }
+            // 인접 이동
             for (int d=0; d<4; d++) {
                 int ny = y + d1y[d];
                 int nx = x + d1x[d];

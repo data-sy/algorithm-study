@@ -9,15 +9,16 @@ import java.util.StringTokenizer;
 public class Ex034_1600_원숭이_BFS_실패 {
     static int K, W, H;
     static int[][] map;
-    static boolean[][] visited;
+    static boolean[][][] visited;
     static int[] d1x = {0, 0, -1, 1};
     static int[] d1y = {-1, 1, 0, 0};
     static int[] d2x = {-1, -2, 1, 2, -1, -2, 1, 2}; // 말의 이동
     static int[] d2y = {-2, -1, -2, -1, 2, 1, 2, 1};
-    static int result;
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/1600
+
+        // 여전히 3%에서 틀림 ㅜㅠ
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         K = Integer.parseInt(br.readLine());
@@ -39,48 +40,67 @@ public class Ex034_1600_원숭이_BFS_실패 {
 //            }
 //            System.out.println();
 //        }
-        visited = new boolean[H][W];
-        result = -1;
-        bfs(0, 0);
-        System.out.println(result);
+
+        visited = new boolean[2][H][W];
+        System.out.println(bfs(new Node(0, 0, 0, 0)));
 
     }
-    static void bfs(int y, int x) {
-        ArrayDeque<int[]> q = new ArrayDeque<>();
-        q.add(new int[]{y, x});
-        visited[y][x]=true;
+    static int bfs(Node node) {
+        ArrayDeque<Node> q = new ArrayDeque<>();
+        q.add(node);
+        visited[0][node.y][node.x]=true;
 
         while(!q.isEmpty()) {
-            int[] now = q.poll();
-            y = now[0];
-            x = now[1];
+            Node now = q.poll();
+            int y = now.y;
+            int x = now.x;
 
             // 해당 위치에 딱 도달한다면
-            if (y==H-1 && x==W-1) {
-                result = map[y][x];
-                return;
-            }
+            if (y==H-1 && x==W-1) return now.step;
 
-            // 말의 이동
-            for (int d=0; d<8; d++) {
-                int ny = y + d2y[d];
-                int nx = x + d2x[d];
-                if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[ny][nx] || map[ny][nx]==1 ) continue;
-                q.add(new int[]{ny, nx});
-                map[ny][nx]= map[y][x]+1;
-                visited[ny][nx] = true;
-            }
-            // 인접 이동
-            for (int d=0; d<4; d++) {
-                int ny = y + d1y[d];
-                int nx = x + d1x[d];
-                if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[ny][nx] || map[ny][nx]==1 ) continue;
-                q.add(new int[]{ny, nx});
-                map[ny][nx]= map[y][x]+1;
-                visited[ny][nx] = true;
+            if (now.k<K) { // 아직 K에 도달하지 않았다면 - 상하좌우로 움직이거나 말로 움직이기
+                // 인접 이동
+                for (int d=0; d<4; d++) {
+                    int ny = y + d1y[d];
+                    int nx = x + d1x[d];
+                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[0][ny][nx] || map[ny][nx]==1 ) continue;
+                    q.add(new Node(now.k, ny, nx, now.step+1));
+                    visited[0][ny][nx] = true;
+                }
+                // 말의 이동
+                for (int d=0; d<8; d++) {
+                    int ny = y + d2y[d];
+                    int nx = x + d2x[d];
+                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[0][ny][nx] || map[ny][nx]==1 ) continue;
+                    q.add(new Node(now.k+1, ny, nx, now.step+1));
+                    if (now.k+1==K) visited[1][ny][nx] = true;
+                    else visited[0][ny][nx] = true;
+                }
+            } else { // K에 도달했다면 - 상하좌우로 움직이기
+                // 인접 이동
+                for (int d=0; d<4; d++) {
+                    int ny = y + d1y[d];
+                    int nx = x + d1x[d];
+                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[1][ny][nx] || map[ny][nx]==1 ) continue;
+                    q.add(new Node(now.k, ny, nx, now.step+1));
+                    visited[1][ny][nx] = true;
+                }
             }
         }
+        return -1;
+    }
 
+    static class Node {
+        int k;
+        int y;
+        int x;
+        int step;
+        Node (int k, int y, int x, int step) {
+            this.k = k;
+            this.y = y;
+            this.x = x;
+            this.step = step;
+        }
     }
 
 }
