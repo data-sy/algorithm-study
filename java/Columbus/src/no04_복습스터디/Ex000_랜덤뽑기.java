@@ -1,7 +1,5 @@
-package 복습스터디;
+package no04_복습스터디;
 
-import java.security.spec.RSAOtherPrimeInfo;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Ex000_랜덤뽑기 {

@@ -1,4 +1,4 @@
-package 복습스터디;
+package no04_복습스터디;
 
 import java.io.BufferedReader;
 import java.io.IOException;
