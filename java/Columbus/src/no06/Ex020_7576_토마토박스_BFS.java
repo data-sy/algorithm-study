@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
-public class Ex020_7576_토마토_BFS {
+public class Ex020_7576_토마토박스_BFS {
     static int N, M;
     static int[][] tomatoBox;
     static boolean[][] visited;
