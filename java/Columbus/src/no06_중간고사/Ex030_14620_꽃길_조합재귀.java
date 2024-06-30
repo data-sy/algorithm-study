@@ -17,6 +17,9 @@ public class Ex030_14620_꽃길_조합재귀 {
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/14620
 
+        // 3개 선택하고 min 갱신한 다음 return을 까먹고 안 해줬더니 4000ms나와 ㅋㅋㅋ
+        // return 붙여주니 136ms
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
         L = N * N;
@@ -43,7 +46,11 @@ public class Ex030_14620_꽃길_조합재귀 {
 
     }
     static void recur(int z){
-        if (k == 3) if (min>sum) min=sum;
+        if (k == 3) {
+            if (min>sum) min=sum;
+            // 내가 여기에 return을 안 줬어서 느렸던 거였어..!
+            return;
+        }
 
         if (z>L) return;
 

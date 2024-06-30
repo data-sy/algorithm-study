@@ -67,7 +67,7 @@ public class Ex032_7569_토마토창고_BFS {
                 int y = now[1];
                 int x = now[2];
                 for (int d=0; d<6; d++) {
-                    int nz = z + dz[d];
+                    int nz = z + dz [d];
                     int ny = y + dy[d];
                     int nx = x + dx[d];
                     if ( nz<0 || ny<0 || nx<0 || nz>=H || ny>=N || nx>=M || visited[nz][ny][nx]) continue;

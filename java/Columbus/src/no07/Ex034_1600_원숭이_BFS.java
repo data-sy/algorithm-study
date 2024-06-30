@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
-public class Ex034_1600_원숭이_BFS_실패 {
+public class Ex034_1600_원숭이_BFS {
     static int K, W, H;
     static int[][] map;
     static boolean[][][] visited;
@@ -17,10 +17,6 @@ public class Ex034_1600_원숭이_BFS_실패 {
 
     public static void main(String[] args) throws IOException {
         // https://www.acmicpc.net/problem/1600
-
-        // 여전히 3%에서 틀림 ㅜㅠ
-        // k를 다 사용했는지/아닌지 가 아니라 해당 횟수를 같이 담아줘야 하나봐
-        // k가 다르면 방문했어도 다른 경로이기 때문에 구분해줘야 해
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         K = Integer.parseInt(br.readLine());
@@ -43,49 +39,39 @@ public class Ex034_1600_원숭이_BFS_실패 {
 //            System.out.println();
 //        }
 
-        visited = new boolean[2][H][W];
-        System.out.println(bfs(new Node(0, 0, 0, 0)));
+        visited = new boolean[K+1][H][W];
+        System.out.println(bfs(0, 0));
 
     }
-    static int bfs(Node node) {
+    static int bfs(int y, int x) {
         ArrayDeque<Node> q = new ArrayDeque<>();
-        q.add(node);
-        visited[0][node.y][node.x]=true;
+        q.add(new Node(0, 0, 0, 0));
+        visited[0][y][x]=true;
 
         while(!q.isEmpty()) {
             Node now = q.poll();
-            int y = now.y;
-            int x = now.x;
+            y = now.y;
+            x = now.x;
 
             // 해당 위치에 딱 도달한다면
             if (y==H-1 && x==W-1) return now.step;
 
-            if (now.k<K) { // 아직 K에 도달하지 않았다면 - 상하좌우로 움직이거나 말로 움직이기
-                // 인접 이동
-                for (int d=0; d<4; d++) {
-                    int ny = y + d1y[d];
-                    int nx = x + d1x[d];
-                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[0][ny][nx] || map[ny][nx]==1 ) continue;
-                    q.add(new Node(now.k, ny, nx, now.step+1));
-                    visited[0][ny][nx] = true;
-                }
+            // 상하좌우 인접
+            for (int d=0; d<4; d++) {
+                int ny = y + d1y[d];
+                int nx = x + d1x[d];
+                if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[now.k][ny][nx] || map[ny][nx]==1 ) continue;
+                q.add(new Node(now.k, ny, nx, now.step+1));
+                visited[now.k][ny][nx] = true;
+            }
+            if (now.k<K) { // 아직 K에 도달하지 않았다면 - 말로도 이동
                 // 말의 이동
                 for (int d=0; d<8; d++) {
                     int ny = y + d2y[d];
                     int nx = x + d2x[d];
-                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[0][ny][nx] || map[ny][nx]==1 ) continue;
+                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[now.k+1][ny][nx] || map[ny][nx]==1 ) continue;
                     q.add(new Node(now.k+1, ny, nx, now.step+1));
-                    if (now.k+1==K) visited[1][ny][nx] = true;
-                    else visited[0][ny][nx] = true;
-                }
-            } else { // K에 도달했다면 - 상하좌우로 움직이기
-                // 인접 이동
-                for (int d=0; d<4; d++) {
-                    int ny = y + d1y[d];
-                    int nx = x + d1x[d];
-                    if ( ny<0 || nx<0 || ny>=H || nx>=W || visited[1][ny][nx] || map[ny][nx]==1 ) continue;
-                    q.add(new Node(now.k, ny, nx, now.step+1));
-                    visited[1][ny][nx] = true;
+                    visited[now.k+1][ny][nx] = true;
                 }
             }
         }
