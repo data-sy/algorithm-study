@@ -29,7 +29,6 @@ public class Ex041_2146_최단다리_DFSBFS {
 
         // 한 층위 안에서는 끝까지 돌아봐야 해 (더 짧은 거리 있을 수 있으니까)
 
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 
@@ -107,7 +106,7 @@ public class Ex041_2146_최단다리_DFSBFS {
 
     }
     static void dfs(int y, int x) {
-        q.add(new int[]{y, x}); // 모든 육지들 미리 담아두자
+        q.add(new int[]{y, x}); // 모든 육지들 미리 담아두자 (나중에 bfs에서 사용)
         visited[y][x] = num;
 
         for (int d=0; d<4; d++) {

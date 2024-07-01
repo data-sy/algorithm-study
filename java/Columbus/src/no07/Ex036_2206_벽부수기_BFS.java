@@ -62,7 +62,7 @@ public class Ex036_2206_벽부수기_BFS {
             x = now.x;
 
             // Q. 최초로 나온 것이 최단이라는 걸 어떻게 보장하지?
-            // A. 회차를 돌면서 step이 늘어나는 거니까 처음 나오는 step이 최단 거리야!
+            // A. 회차를 돌면서 step이 늘어나는 거니까 y, x가 같은 노드더라도 처음 나오는 step이 최단 거리야!
             if (y==N-1 && x==M-1) return now.step;
 
             for (int d=0; d<4; d++) {
