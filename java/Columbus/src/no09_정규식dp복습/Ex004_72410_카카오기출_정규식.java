@@ -2,10 +2,10 @@ package no09_정규식dp복습;
 
 import java.io.IOException;
 
-public class Ex004_카카오기출_정규식 {
+public class Ex004_72410_카카오기출_정규식 {
 
     public static void main(String[] args) throws IOException {
-        // https://school.programmers.co.kr/learn/courses/30/lessons/72410
+        //https://school.programmers.co.kr/learn/courses/30/lessons/72410
 
         String new_id = "...!@BaT#*..y.abcdefghijklm";
 
