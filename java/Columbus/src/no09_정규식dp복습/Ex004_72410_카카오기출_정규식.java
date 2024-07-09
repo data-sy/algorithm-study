@@ -20,11 +20,13 @@ public class Ex004_72410_카카오기출_정규식 {
 
         // 1단계
         // Q. 여기도 정규표현식을 사용할 수 있는 방법이 있을까?
-        for (int i=0; i<new_id.length(); i++) {
-            char ch = new_id.charAt(i);
-            if (65<=ch && ch<=90) sb.append((char)(ch + 32));
-            else sb.append(ch);
-        }
+//        for (int i=0; i<new_id.length(); i++) {
+//            char ch = new_id.charAt(i);
+//            if (65<=ch && ch<=90) sb.append((char)(ch + 32));
+//            else sb.append(ch);
+//        }
+        // 여기는 정규식 말고 그냥 메서드 있음...;;
+        new_id.toLowerCase();
 
 //        System.out.println(sb);
 
@@ -50,7 +52,6 @@ public class Ex004_72410_카카오기출_정규식 {
             new_id = sb.toString();
         }
         new_id = new_id.replaceAll("\\.$", "");
-
 
         // 7단계
         int len = new_id.length();
