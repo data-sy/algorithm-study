@@ -32,13 +32,14 @@ public class Ex013_12971_스티커모으기_DP {
             int[] dp1 = new int[n+1]; // 1번 스티커 사용
             int[] dp2 = new int[n+1]; // 1번 스티커 사용x
             dp1[1] = dp1[2] = sticker[0];
+            dp2[1] =0;
             dp2[2] = sticker[1];
             for (int i=3; i<=n; i++) {
                 dp1[i] = Math.max(dp1[i - 1], dp1[i - 2] + sticker[i - 1]);
                 dp2[i] = Math.max(dp2[i - 1], dp2[i - 2] + sticker[i - 1]);
             }
-            System.out.println(Arrays.toString(dp1));
-            System.out.println(Arrays.toString(dp2));
+//            System.out.println(Arrays.toString(dp1));
+//            System.out.println(Arrays.toString(dp2));
             answer = Math.max(dp1[n-1], dp2[n]);
         }
         System.out.println(answer);
