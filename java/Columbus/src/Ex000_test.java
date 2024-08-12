@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Ex000_test {
 	
@@ -329,24 +331,47 @@ public class Ex000_test {
 //		System.out.println(num);
 
 
-        // 배열을 String으로 넣었을 때 key가 될 수 있는지 => yes!
-        HashMap<String, Integer> map = new HashMap<>();
-        int[] arr1 = new int[] {1, 2};
-        int[] arr2 = new int[] {3, 7};
-        int[] arr3 = new int[] {5, 3};
-        int[] arr4 = new int[] {6, 2};
-        int[] arr5 = new int[] {7, 9};
+//        // 배열을 String으로 넣었을 때 key가 될 수 있는지 => yes!
+//        HashMap<String, Integer> map = new HashMap<>();
+//        int[] arr1 = new int[] {1, 2};
+//        int[] arr2 = new int[] {3, 7};
+//        int[] arr3 = new int[] {5, 3};
+//        int[] arr4 = new int[] {6, 2};
+//        int[] arr5 = new int[] {7, 9};
+//
+//        map.put(arr1.toString(), 1);
+//        map.put(arr2.toString(), 2);
+//        map.put(arr3.toString(), 3);
+//        map.put(arr4.toString(), 4);
+//        map.put(arr5.toString(), 5);
+//
+//        System.out.println(map.getOrDefault(arr3.toString(), 0));
+//        // 같은 값을 가져도 새롭게 생성되면 다른 원소
+//        System.out.println(map.getOrDefault(new int[] {5, 3}, 0));
 
-        map.put(arr1.toString(), 1);
-        map.put(arr2.toString(), 2);
-        map.put(arr3.toString(), 3);
-        map.put(arr4.toString(), 4);
-        map.put(arr5.toString(), 5);
+//            String str1 = "Hello"; // 문자열 리터럴을 이용한 방식
+//            String str2 = "Hello";
+//            String str3 = str2;
+//            System.out.println(str1 == str2); // true : 리터럴 문자열은 같은 주소
+//            System.out.println(str1 == str3); // true : 리터럴 문자열은 같은 주소
 
-        System.out.println(map.getOrDefault(arr3.toString(), 0));
-        // 같은 값을 가져도 새롭게 생성되면 다른 원소
-        System.out.println(map.getOrDefault(new int[] {5, 3}, 0));
+//        // replaceAll
+//        String str = "001010";
+//        String str2 = str.replaceAll("^0+", "");
+//        System.out.println(str2);
 
+//        // String 객체가 regex 가능한지
+//        // 우선 리터럴로 해당 정규식 찾음
+//        System.out.println(Pattern.matches("^a[a-z]*d$", "abcd"));
+//        // String으로 같은 정규식이 되게 하려면?
+//        String str = "\\^a[a-z]\\*d\\$";
+//        System.out.println(str);
+//        System.out.println(Pattern.matches(str, "abcd"));
+
+
+//        // 빈 문자열의 길이 확인 => 0
+//        String str = "";
+//        System.out.println(str.length());
 
 	}
 
