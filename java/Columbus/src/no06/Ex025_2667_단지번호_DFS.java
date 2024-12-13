@@ -21,6 +21,9 @@ public class Ex025_2667_단지번호_DFS {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 
+        int[][] map = new int[3][3];
+        map[0].length;
+
         map = new int[N][N];
         for (int y=0; y<N; y++) {
             String str = br.readLine();
@@ -48,6 +51,7 @@ public class Ex025_2667_단지번호_DFS {
                 }
             }
         }
+        System.out.println();
 
         sb.append(list.size()).append('\n');
         Collections.sort(list);
