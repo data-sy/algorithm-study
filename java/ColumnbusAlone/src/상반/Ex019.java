@@ -8,43 +8,33 @@ import java.util.Stack;
 public class Ex019 {
 
     public static void main (String[] args) throws IOException {
-        // https://www.acmicpc.net/problem/1935
+        // https://www.acmicpc.net/problem/1874
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        String str = br.readLine();
+        StringBuilder sb = new StringBuilder();
 
-        double[] alphabetArr = new double[26];
-        for (int i = 0; i < N; i++) {
-            alphabetArr[i] = Double.parseDouble(br.readLine());
+        int n = Integer.parseInt(br.readLine());
+
+        Stack<Integer> stack = new Stack<>();
+        int index = 1;
+        for (int i = 0; i < n; i++) {
+            int num = Integer.parseInt(br.readLine());
+            while (index <= num) {
+                stack.push(index++);
+                sb.append('+').append('\n');
+            }
+            if (stack.peek() == num) {
+                stack.pop();
+                sb.append('-').append('\n');
+            } else {
+                sb.setLength(0);
+                sb.append("NO");
+                break;
+            }
         }
 
-        Stack<Double> stack = new Stack<>();
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (65 <= ch) stack.push(alphabetArr[ch - 65]);
-            else stack.push(calculate(ch, stack.pop(), stack.pop()));
-        }
-        System.out.printf("%.2f", stack.pop());
+        System.out.println(sb);
 
-    }
-    public static double calculate(char ch, double num2, double num1) {
-        double num = 0;
-        switch (ch) {
-            case '+':
-                num = num1 + num2;
-                break;
-            case '-':
-                num = num1 - num2;
-                break;
-            case '*':
-                num = num1 * num2;
-                break;
-            case '/':
-                num = num1 / num2;
-                break;
-        }
-        return num;
     }
 
 }
