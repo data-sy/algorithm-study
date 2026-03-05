@@ -1,0 +1,177 @@
+# ArrayList — 배열 기반 동적 리스트
+
+> 코딩테스트에서 가장 많이 쓰는 자료구조. 순서가 있고 중복을 허용하는 동적 배열.
+
+**계층 위치**: `Iterable` → `Collection` → `List` → `ArrayList`
+
+---
+
+## 핵심 메서드
+
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `add(e)` | 끝에 추가 | O(1) |
+| `add(index, e)` | 특정 위치에 삽입 | O(n) |
+| `remove(index)` | 인덱스로 제거 | O(n) |
+| `remove(Object o)` | 값으로 제거 (첫 번째만) | O(n) |
+| `get(index)` | 인덱스로 접근 | O(1) |
+| `set(index, e)` | 인덱스 위치 값 변경 | O(1) |
+| `size()` | 크기 반환 | O(1) |
+| `subList(from, to)` | 부분 리스트 (뷰) | O(1) |
+| `sort(comparator)` | 정렬 (원본 변경) | O(n log n) |
+| `indexOf(o)` | 값의 첫 번째 인덱스 (-1 if 없음) | O(n) |
+| `contains(o)` | 값 존재 여부 | O(n) |
+| `isEmpty()` | 비어있는지 확인 | O(1) |
+
+---
+
+## 패턴 1: 스택처럼 사용 — add / get(size()-1)
+
+### 언제 쓰는가
+- 이전 값과 현재 값을 비교해야 할 때 (연속 중복 제거, 괄호 검증 등)
+- 마지막에 넣은 값을 꺼내서 비교하는 LIFO 패턴
+
+### 실무에서는
+- Undo/Redo 기능, 브라우저 뒤로가기 버튼
+
+```java
+import java.util.*;
+
+public class StackLikeUsage {
+    public static void main(String[] args) {
+        // 연속 중복 제거: [1, 1, 3, 3, 0, 1, 1] → [1, 3, 0, 1]
+        int[] arr = {1, 1, 3, 3, 0, 1, 1};
+        List<Integer> result = new ArrayList<>();
+
+        for (int num : arr) {
+            // 리스트가 비어있거나, 마지막 값과 다르면 추가
+            if (result.isEmpty() || !result.get(result.size() - 1).equals(num)) {
+                result.add(num);
+            }
+        }
+
+        System.out.println(result); // [1, 3, 0, 1]
+    }
+}
+```
+
+---
+
+## 패턴 2: subList로 부분 배열 추출
+
+### 언제 쓰는가
+- 특정 범위만 잘라서 정렬하거나 처리해야 할 때
+- 슬라이딩 윈도우에서 구간 추출
+
+### 실무에서는
+- 페이지네이션 구현, 배치 처리
+
+```java
+import java.util.*;
+
+public class SubListExample {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>(Arrays.asList(5, 3, 8, 1, 9, 2, 7));
+
+        // 인덱스 2~4 구간만 추출 (8, 1, 9)
+        List<Integer> sub = new ArrayList<>(list.subList(2, 5));
+        System.out.println(sub); // [8, 1, 9]
+
+        // 부분 리스트 정렬 후 원본에 반영
+        Collections.sort(list.subList(2, 5));
+        System.out.println(list); // [5, 3, 1, 8, 9, 2, 7] — 인덱스 2~4만 정렬됨
+    }
+}
+```
+
+---
+
+## 패턴 3: contains/indexOf로 존재 여부 + 위치 확인
+
+### 언제 쓰는가
+- 값이 존재하는지 확인하면서 동시에 위치도 필요할 때
+- 특정 순서 기반 조건 체크
+
+### 실무에서는
+- 검색 결과 위치 표시, 화이트리스트 체크
+
+```java
+import java.util.*;
+
+public class ContainsIndexOfExample {
+    public static void main(String[] args) {
+        List<String> ranking = new ArrayList<>(Arrays.asList("gold", "silver", "bronze"));
+
+        // 존재 여부 확인
+        String medal = "silver";
+        if (ranking.contains(medal)) {
+            int position = ranking.indexOf(medal);
+            System.out.println(medal + "은(는) " + (position + 1) + "등입니다"); // silver은(는) 2등입니다
+        }
+
+        // 없는 값 확인
+        System.out.println(ranking.indexOf("platinum")); // -1
+    }
+}
+```
+
+---
+
+## 패턴 4: 이중 반복문으로 모든 쌍 비교
+
+### 언제 쓰는가
+- 모든 조합(쌍)을 비교해야 할 때 (O(n²) 허용되는 경우)
+- 두 수의 합, 가장 가까운 쌍 찾기 등
+
+### 실무에서는
+- 중복 데이터 감지, 유사도 비교
+
+```java
+import java.util.*;
+
+public class PairComparison {
+    public static void main(String[] args) {
+        // 두 수의 합이 target인 쌍 찾기
+        List<Integer> nums = Arrays.asList(2, 7, 11, 15);
+        int target = 9;
+
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i + 1; j < nums.size(); j++) {
+                if (nums.get(i) + nums.get(j) == target) {
+                    System.out.println(nums.get(i) + " + " + nums.get(j) + " = " + target);
+                    // 2 + 7 = 9
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## 주의사항
+
+### subList는 뷰(view)를 반환한다 — 복사가 아님
+```java
+List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+List<Integer> sub = list.subList(1, 3); // [2, 3] — 원본의 뷰
+list.set(1, 99);
+System.out.println(sub); // [99, 3] — 원본 변경이 뷰에 반영됨!
+
+// 독립적인 복사본이 필요하면:
+List<Integer> copy = new ArrayList<>(list.subList(1, 3));
+```
+
+### remove(int index) vs remove(Object o) 혼동
+```java
+List<Integer> list = new ArrayList<>(Arrays.asList(10, 20, 30));
+list.remove(1);           // 인덱스 1의 요소 제거 → [10, 30]
+
+list = new ArrayList<>(Arrays.asList(10, 20, 30));
+list.remove(Integer.valueOf(20)); // 값 20 제거 → [10, 30]
+// Integer 리스트에서 값으로 제거하려면 반드시 Integer.valueOf() 사용
+```
+
+### ArrayList vs LinkedList 선택 기준
+- **ArrayList**: 인덱스 접근이 많으면 사용 (get/set O(1)). 코딩테스트에서는 거의 항상 ArrayList.
+- **LinkedList**: 맨 앞/중간 삽입·삭제가 빈번하면 고려 (하지만 실제로는 ArrayList가 캐시 효율이 좋아서 대부분 더 빠름).
