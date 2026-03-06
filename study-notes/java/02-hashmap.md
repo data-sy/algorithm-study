@@ -90,6 +90,12 @@ if (current > 10) {
 }
 ```
 
+### keySet()은 Set, values()는 Collection으로 반환하는 이유
+
+- `keySet()` → Set: 키는 HashMap에서 **중복이 불가능**하므로, 중복을 허용하지 않는 Set으로 반환
+- `values()` → Collection: 값은 **중복이 가능**하므로 (`{"a":1, "b":1, "c":2}` 처럼 값 1이 두 번 나올 수 있음), 중복을 허용하는 Collection으로 반환
+
+
 ### 시간복잡도 — 왜 대부분 O(1)인가
 
 HashMap의 거의 모든 메서드가 O(1)인 이유는 해시 자료구조의 핵심 특징 때문이다.
