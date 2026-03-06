@@ -54,14 +54,19 @@ List<Integer> list2 = stream.toList(); // 불변 리스트 (add/remove 불가)
 
 ---
 
-## 패턴 1: sorted + distinct + collect — 중복 제거 후 정렬
+# 패턴
+
+> 코딩테스트 출제 빈도: 패턴 1 중복 제거 + 정렬 > 패턴 2 조건 필터링 > 패턴 3 변환 > 패턴 4 누적 계산
+
+---
+
+## 패턴 1: 중복 제거 + 정렬 — distinct + sorted + collect
 
 ### 언제 쓰는가
 - 중복을 제거하고 정렬된 결과가 필요할 때
 
 ### 실무에서는
 - 태그 목록 정리, 중복 제거된 검색 추천어
-
 ```java
 import java.util.*;
 import java.util.stream.*;
@@ -82,14 +87,13 @@ public class SortedDistinct {
 
 ---
 
-## 패턴 2: filter로 조건 필터링
+## 패턴 2: 조건 필터링 — filter + collect
 
 ### 언제 쓰는가
 - 조건에 맞는 요소만 추출할 때
 
 ### 실무에서는
 - 활성 사용자 필터링, 주문 상태별 필터링
-
 ```java
 import java.util.*;
 import java.util.stream.*;
@@ -117,14 +121,13 @@ public class FilterExample {
 
 ---
 
-## 패턴 3: map 변환 + collect
+## 패턴 3: 변환 — map + collect
 
 ### 언제 쓰는가
 - 각 요소를 다른 형태로 변환해서 새 리스트를 만들 때
 
 ### 실무에서는
 - Entity → DTO 변환, 응답 객체 매핑
-
 ```java
 import java.util.*;
 import java.util.stream.*;
@@ -152,14 +155,13 @@ public class MapTransform {
 
 ---
 
-## 패턴 4: reduce로 누적 계산
+## 패턴 4: 누적 계산 — reduce
 
 ### 언제 쓰는가
 - 모든 요소를 하나의 값으로 합칠 때 (합계, 최대/최소 등)
 
 ### 실무에서는
 - 총 매출액 계산, 최솟값/최댓값 산출
-
 ```java
 import java.util.*;
 

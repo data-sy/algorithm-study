@@ -34,14 +34,42 @@
 
 ---
 
-## 패턴 1: filter로 조건 필터링
+# 패턴
+
+> 코딩테스트 출제 빈도: 패턴 1 중복 제거 + 정렬 > 패턴 2 조건 필터링 > 패턴 3 변환 > 패턴 4 누적 계산 > 패턴 5 검색 > 패턴 6 조건 확인 > 패턴 7 체이닝
+
+---
+
+## 패턴 1: 중복 제거 + 정렬 — Set + sort (고차함수 없이 해결)
+
+### 언제 쓰는가
+- 중복을 제거하고 정렬된 결과가 필요할 때
+- Java에서는 Stream의 `distinct()` + `sorted()`로 처리하지만, JS에서는 고차함수 없이 Set + sort 조합으로 해결
+
+### 실무에서는
+- 태그 목록 정리, 중복 제거된 검색 추천어
+```javascript
+const tags = ["java", "python", "java", "c++", "python", "go"];
+
+// Set으로 중복 제거 → 배열로 변환 → 정렬
+const uniqueSorted = [...new Set(tags)].sort();
+console.log(uniqueSorted); // ["c++", "go", "java", "python"]
+
+// 숫자 배열의 경우 sort 콜백 필수
+const nums = [3, 1, 4, 1, 5, 9, 2, 6, 5];
+const uniqueNums = [...new Set(nums)].sort((a, b) => a - b);
+console.log(uniqueNums); // [1, 2, 3, 4, 5, 6, 9]
+```
+
+---
+
+## 패턴 2: 조건 필터링 — filter
 
 ### 언제 쓰는가
 - 조건에 맞는 요소만 추출할 때
 
 ### 실무에서는
 - 검색 필터, 권한별 메뉴 표시
-
 ```javascript
 const scores = [45, 78, 92, 33, 88, 61, 55];
 
@@ -62,14 +90,13 @@ console.log(appWords); // ["apple", "application", "appetite"]
 
 ---
 
-## 패턴 2: map으로 변환
+## 패턴 3: 변환 — map
 
 ### 언제 쓰는가
 - 각 요소를 다른 형태로 변환할 때
 
 ### 실무에서는
 - API 응답 → UI 컴포넌트 데이터 변환
-
 ```javascript
 const names = ["alice", "bob", "charlie"];
 
@@ -97,14 +124,13 @@ console.log(strs); // ["1", "2", "3"]
 
 ---
 
-## 패턴 3: reduce로 누적 (합계, 객체 빌드, 그룹화)
+## 패턴 4: 누적 계산 — reduce
 
 ### 언제 쓰는가
 - 배열 전체를 하나의 값으로 합칠 때
 
 ### 실무에서는
 - 장바구니 총합, 통계 집계
-
 ```javascript
 // 합계
 const prices = [1200, 3500, 800, 5000];
@@ -141,14 +167,14 @@ console.log(groups); // { A: ["Alice", "Charlie"], B: ["Bob", "David"] }
 
 ---
 
-## 패턴 4: find/findIndex로 검색
+## 패턴 5: 검색 — find / findIndex
 
 ### 언제 쓰는가
 - 조건에 맞는 첫 번째 요소가 필요할 때
+- Java의 `findFirst()`에 대응하지만, JS에서 더 자주 사용됨
 
 ### 실무에서는
 - 특정 ID로 사용자 찾기
-
 ```javascript
 const users = [
     { id: 1, name: "Alice" },
@@ -171,14 +197,14 @@ console.log(notFound); // undefined
 
 ---
 
-## 패턴 5: some/every로 조건 확인
+## 패턴 6: 조건 확인 — some / every
 
 ### 언제 쓰는가
 - "하나라도 만족?" vs "모두 만족?" 확인할 때
+- Java의 `anyMatch()` / `allMatch()`에 대응하지만, JS에서 더 자주 사용됨
 
 ### 실무에서는
 - 폼 유효성 검증, 전체 선택 체크박스 상태
-
 ```javascript
 const scores = [85, 92, 78, 95, 88];
 
@@ -202,14 +228,13 @@ console.log("폼 유효:", isFormValid); // 폼 유효: false
 
 ---
 
-## 패턴 6: 메서드 체이닝 — filter().map().reduce()
+## 패턴 7: 메서드 체이닝 — filter + map + reduce
 
 ### 언제 쓰는가
 - 여러 처리를 연속으로 할 때
 
 ### 실무에서는
 - 데이터 변환 파이프라인
-
 ```javascript
 // JS: 60점 이상의 점수를 10점 가산 후 합계
 const scores = [45, 78, 92, 33, 88, 61, 55];
@@ -221,7 +246,6 @@ const result = scores
 
 console.log("가산 후 합계:", result); // 가산 후 합계: 359
 ```
-
 ```java
 // Java: 동일한 로직
 // import java.util.*;
@@ -276,3 +300,11 @@ const sum = nums.reduce((acc, n) => acc + n); // 6 — 동작은 하지만...
 // 항상 초기값을 명시하는 것이 안전
 const safeSum = [].reduce((acc, n) => acc + n, 0); // 0
 ```
+
+---
+
+### cf. 고차함수와 수학의 합성함수
+
+**같은 점**: 둘 다 함수를 대상으로 한다. 일반 함수가 숫자/문자열을 다루듯, 함수 자체를 입력이나 출력으로 사용한다.
+
+**다른 점**: 합성함수 f(g(x))는 함수의 출력을 다른 함수의 입력으로 넣는 한 가지 패턴이다. 고차함수는 그보다 범위가 넓어서, 함수를 인자로 받거나(`map(callback)`), 함수를 반환하는 함수 전체를 포함한다. 즉 합성함수는 고차함수의 부분집합이다.
