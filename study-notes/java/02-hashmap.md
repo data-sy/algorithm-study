@@ -107,7 +107,13 @@ HashMap의 거의 모든 메서드가 O(1)인 이유는 해시 자료구조의 �
 
 ---
 
-## 패턴 1-1: 빈도 세기 — getOrDefault vs merge
+# 패턴
+
+> 코딩테스트 출제 빈도: 패턴 1 빈도 세기 > 패턴 2 고유 개수 > 패턴 3 부분 문자열 검사 > 패턴 1 심화 빈도 + 조합
+
+---
+
+## 패턴 1: 빈도 세기 — getOrDefault vs merge
 
 ### 언제 쓰는가
 - 각 요소가 몇 번 등장하는지 카운트할 때
@@ -153,16 +159,30 @@ public class FrequencyCounting {
 }
 ```
 
----
+### 방법 선택 기준
+- 빈도수 세기처럼 **단순 누적**이면 `merge`가 간결
+- 조건 분기가 복잡하면 `getOrDefault + put`으로 풀어쓰는 게 읽기 편함
+```java
+// 단순 누적 → merge가 간결
+map.merge(word, 1, Integer::sum);
 
-## 패턴 1-2 (심화): 빈도 세기 + 그룹별 조합 계산
+// 조건이 복잡한 경우 → getOrDefault + put이 읽기 편함
+int current = map.getOrDefault(key, 0);
+if (current > 10) {
+    map.put(key, current + 5);
+} else {
+    map.put(key, current + 1);
+}
+```
 
-### 언제 쓰는가
+### 심화: 빈도 세기 + 그룹별 조합 계산
+
+#### 언제 쓰는가
 - 그룹별로 분류한 뒤 조합 수를 계산할 때
 - "같은 종류끼리 짝짓기" 유형
-- 패턴 1-1로 빈도를 센 뒤, 그 결과를 활용하는 패턴
+- 패턴 1로 빈도를 센 뒤, 그 결과를 활용하는 패턴
 
-### 실무에서는
+#### 실무에서는
 - 상품 옵션 조합, A/B 테스트 그룹 배정
 ```java
 import java.util.*;
@@ -172,7 +192,7 @@ public class EntrySetCombination {
         // 같은 색상의 옷 중 2개를 고르는 경우의 수
         String[] clothes = {"red", "red", "red", "blue", "blue", "green"};
 
-        // 색상별 개수 세기 (패턴 1-1)
+        // 색상별 개수 세기 (패턴 1)
         Map<String, Integer> colorCount = new HashMap<>();
         for (String color : clothes) {
             colorCount.merge(color, 1, Integer::sum);
@@ -197,7 +217,7 @@ public class EntrySetCombination {
 
 ---
 
-## 패턴 2: keySet/Set 크기로 고유 개수 구하기
+## 패턴 2: Set으로 중복 제거 + 고유 개수
 
 ### 언제 쓰는가
 - 서로 다른 종류가 몇 개인지 셀 때
@@ -213,16 +233,17 @@ public class UniqueCount {
     public static void main(String[] args) {
         String[] animals = {"cat", "dog", "cat", "bird", "dog", "fish"};
 
-        // 방법 1: HashMap으로 빈도를 세고 keySet 크기
+        // 기본: 고유 개수만 필요하면 HashSet
+        Set<String> set = new HashSet<>(Arrays.asList(animals));
+        System.out.println("종류 수: " + set.size()); // 종류 수: 4
+
+        // 심화: 각 종류별 개수까지 필요하면 HashMap으로 빈도를 세고 keySet 크기
         Map<String, Integer> map = new HashMap<>();
         for (String animal : animals) {
             map.put(animal, map.getOrDefault(animal, 0) + 1);
         }
         System.out.println("종류 수: " + map.keySet().size()); // 종류 수: 4
-
-        // 방법 2: 단순히 고유 개수만 필요하면 HashSet이 더 간단
-        Set<String> set = new HashSet<>(Arrays.asList(animals));
-        System.out.println("종류 수: " + set.size()); // 종류 수: 4
+        System.out.println("각 종류별 개수: " + map);          // {cat=2, dog=2, bird=1, fish=1}
     }
 }
 ```
@@ -283,7 +304,6 @@ phone.substring(phone.length() - i);          // "1", "21", "421", ...
 // 내부 문자열: 모든 구간을 자름
 phone.substring(i, j);                        // 가능한 모든 부분 문자열
 ```
-
 ---
 
 ## 주의사항
