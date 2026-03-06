@@ -25,7 +25,7 @@
 
 ---
 
-## 패턴 1: push/pop으로 스택 활용
+## 패턴 1: 스택처럼 사용 — push / pop
 
 ### 언제 쓰는가
 - 괄호 검증, 이전 값과 비교, LIFO(후입선출) 패턴
@@ -57,7 +57,7 @@ console.log(isValidParentheses("((")); // false
 
 ---
 
-## 패턴 2: slice로 부분 배열 추출 (원본 보존)
+## 패턴 2: 부분 배열 추출 — slice
 
 ### 언제 쓰는가
 - 원본을 건드리지 않고 특정 구간을 추출할 때
@@ -95,7 +95,7 @@ console.log(getPage(items, 4, 3)); // [10]
 
 ---
 
-## 패턴 3: indexOf + splice로 찾아서 제거
+## 패턴 3: 찾아서 제거 — indexOf + splice
 
 ### 언제 쓰는가
 - 특정 값을 찾아서 삭제할 때
@@ -128,7 +128,7 @@ console.log(filtered); // ["python", "java"]
 
 ---
 
-## 패턴 4: 2차원 배열 인덱스 순회
+## 패턴 4: 2차원 배열 순회 — 이중 인덱스
 
 ### 언제 쓰는가
 - 행렬(matrix), 격자(grid) 데이터 처리

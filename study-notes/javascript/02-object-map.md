@@ -131,7 +131,7 @@ for (const [fruit, cnt] of Object.entries(count)) {
 console.log(`${maxFruit}: ${maxCount}번`); // apple: 3번
 ```
 
-### 심화: 빈도 세기 + 그룹별 조합 계산
+### 심화: 빈도 + 그룹별 조합 계산
 
 #### 언제 쓰는가
 - 그룹별로 분류한 뒤 조합 수를 계산할 때
@@ -169,7 +169,7 @@ console.log("조합 수:", combinations); // 조합 수: 5
 
 ---
 
-## 패턴 2: Set으로 중복 제거 + 고유 개수
+## 패턴 2: 중복 제거 + 고유 개수 — Set
 
 ### 언제 쓰는가
 - 서로 다른 종류가 몇 개인지 셀 때

@@ -85,7 +85,7 @@ list.remove(list.size() - 1);         // pop
 
 ---
 
-## 패턴 2: subList로 부분 배열 추출
+## 패턴 2: 부분 배열 추출 — subList
 
 ### 언제 쓰는가
 - 특정 범위만 잘라서 정렬하거나 처리해야 할 때
@@ -114,7 +114,7 @@ public class SubListExample {
 
 ---
 
-## 패턴 3: contains/indexOf로 존재 여부 + 위치 확인
+## 패턴 3: 패턴 3: 존재 여부 + 위치 확인 — contains / indexOf
 
 ### 언제 쓰는가
 - 값이 존재하는지 확인하면서 동시에 위치도 필요할 때
@@ -169,7 +169,7 @@ public class RankingComparison {
 
 ---
 
-## 패턴 4: 이중 반복문으로 모든 쌍 비교
+## 패턴 4: 모든 쌍 비교 — 이중 반복문
 
 ### 언제 쓰는가
 - 모든 조합(쌍)을 비교해야 할 때 (O(n²) 허용되는 경우)

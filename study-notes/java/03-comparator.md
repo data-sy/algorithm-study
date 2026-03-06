@@ -104,7 +104,7 @@ public class LargestNumber {
 
 ---
 
-## 패턴 3: reversed() 내림차순 + 인덱스 조건 탐색
+## 패턴 3: 내림차순 + 인덱스 조건 탐색 — reversed()
 
 ### 언제 쓰는가
 - 가장 큰 값부터 조건을 확인해야 할 때
@@ -137,7 +137,7 @@ public class ReversedSearch {
 
 ---
 
-## 패턴 4: thenComparing으로 다단계 정렬
+## 패턴 4: 다단계 정렬 — thenComparing
 
 ### 언제 쓰는가
 - 1차 기준이 같을 때 2차 기준으로 정렬해야 할 때
