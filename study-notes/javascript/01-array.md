@@ -8,20 +8,20 @@
 
 ## 핵심 메서드
 
-| 메서드 | 설명 | 원본 변경 |
-|---|---|---|
-| `push(e)` | 끝에 추가 | O |
-| `pop()` | 끝에서 제거 후 반환 | O |
-| `shift()` | 앞에서 제거 후 반환 | O |
-| `unshift(e)` | 앞에 추가 | O |
-| `splice(start, count, ...items)` | 특정 위치에서 제거/추가 | O |
-| `slice(start, end)` | 부분 배열 복사 | X |
-| `includes(e)` | 값 존재 여부 (boolean) | X |
-| `indexOf(e)` | 값의 첫 번째 인덱스 (-1 if 없음) | X |
-| `join(separator)` | 배열 → 문자열 | X |
-| `length` | 배열 길이 (속성) | - |
-| `concat(arr)` | 배열 합치기 | X |
-| `fill(value, start, end)` | 특정 값으로 채우기 | O |
+| 메서드 | 설명 | 원본 변경 | 시간복잡도 |
+|---|---|---|---|
+| `push(e)` | 끝에 추가 | O | O(1) |
+| `pop()` | 끝에서 제거 후 반환 | O | O(1) |
+| `shift()` | 앞에서 제거 후 반환 | O | O(n) |
+| `unshift(e)` | 앞에 추가 | O | O(n) |
+| `splice(start, count, ...items)` | 특정 위치에서 제거/추가 | O | O(n) |
+| `slice(start, end)` | 부분 배열 복사 | X | O(n) |
+| `includes(e)` | 값 존재 여부 (boolean) | X | O(n) |
+| `indexOf(e)` | 값의 첫 번째 인덱스 (-1 if 없음) | X | O(n) |
+| `join(separator)` | 배열 → 문자열 | X | O(n) |
+| `length` | 배열 길이 (속성) | - | O(1) |
+| `concat(arr)` | 배열 합치기 | X | O(n) |
+| `fill(value, start, end)` | 특정 값으로 채우기 | O | O(n) |
 
 ---
 

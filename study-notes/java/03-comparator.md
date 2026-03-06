@@ -21,16 +21,16 @@
 
 ## 핵심 메서드
 
-| 메서드 | 설명 |
-|---|---|
-| `compare(a, b)` | a < b → 음수, a == b → 0, a > b → 양수 |
-| `Comparator.comparingInt(keyExtractor)` | int 키 기준 오름차순 |
-| `Comparator.comparingLong(keyExtractor)` | long 키 기준 오름차순 |
-| `Comparator.comparing(keyExtractor)` | Comparable 키 기준 오름차순 |
-| `thenComparing(keyExtractor)` | 1차 정렬 후 2차 정렬 |
-| `reversed()` | 정렬 순서 뒤집기 |
-| 람다 `(a, b) -> a - b` | 오름차순 (가장 많이 쓰는 형태) |
-| 람다 `(a, b) -> b - a` | 내림차순 |
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `compare(a, b)` | a < b → 음수, a == b → 0, a > b → 양수 | O(1) |
+| `Comparator.comparingInt(keyExtractor)` | int 키 기준 오름차순 | O(1) |
+| `Comparator.comparingLong(keyExtractor)` | long 키 기준 오름차순 | O(1) |
+| `Comparator.comparing(keyExtractor)` | Comparable 키 기준 오름차순 | O(1) |
+| `thenComparing(keyExtractor)` | 1차 정렬 후 2차 정렬 | O(1) |
+| `reversed()` | 정렬 순서 뒤집기 | O(1) |
+| 람다 `(a, b) -> a - b` | 오름차순 (가장 많이 쓰는 형태) | O(1) |
+| 람다 `(a, b) -> b - a` | 내림차순 | O(1) |
 
 ---
 

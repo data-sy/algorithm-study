@@ -20,41 +20,41 @@
 
 ## Object 핵심 메서드
 
-| 메서드/문법 | 설명 |
-|---|---|
-| `obj[key]` / `obj.key` | 값 접근 (없으면 undefined) |
-| `obj[key] = value` | 값 설정 |
-| `Object.keys(obj)` | 모든 키 배열 반환 |
-| `Object.values(obj)` | 모든 값 배열 반환 |
-| `Object.entries(obj)` | [키, 값] 쌍의 배열 반환 |
-| `delete obj[key]` | 키-값 삭제 |
-| `obj.hasOwnProperty(key)` | 키 존재 여부 |
-| `key in obj` | 키 존재 여부 (프로토타입 체인 포함) |
+| 메서드/문법 | 설명 | 시간복잡도 |
+|---|---|---|
+| `obj[key]` / `obj.key` | 값 접근 (없으면 undefined) | O(1) |
+| `obj[key] = value` | 값 설정 | O(1) |
+| `Object.keys(obj)` | 모든 키 배열 반환 | O(n) |
+| `Object.values(obj)` | 모든 값 배열 반환 | O(n) |
+| `Object.entries(obj)` | [키, 값] 쌍의 배열 반환 | O(n) |
+| `delete obj[key]` | 키-값 삭제 | O(1) |
+| `obj.hasOwnProperty(key)` | 키 존재 여부 | O(1) |
+| `key in obj` | 키 존재 여부 (프로토타입 체인 포함) | O(1) |
 
 ---
 
 ## Map 핵심 메서드
 
-| 메서드 | 설명 |
-|---|---|
-| `map.set(key, value)` | 키-값 저장 |
-| `map.get(key)` | 키로 값 조회 (없으면 undefined) |
-| `map.has(key)` | 키 존재 여부 |
-| `map.size` | 저장된 쌍 개수 |
-| `map.delete(key)` | 키-값 삭제 |
-| `map.entries()` | [키, 값] 이터레이터 |
-| `map.forEach(callback)` | 각 쌍에 대해 함수 실행 |
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `map.set(key, value)` | 키-값 저장 | O(1) |
+| `map.get(key)` | 키로 값 조회 (없으면 undefined) | O(1) |
+| `map.has(key)` | 키 존재 여부 | O(1) |
+| `map.size` | 저장된 쌍 개수 | O(1) |
+| `map.delete(key)` | 키-값 삭제 | O(1) |
+| `map.entries()` | [키, 값] 이터레이터 | O(1) |
+| `map.forEach(callback)` | 각 쌍에 대해 함수 실행 | O(n) |
 
 ---
 
 ## Set — 중복 제거 특화
 
-| 메서드 | 설명 |
-|---|---|
-| `set.add(value)` | 값 추가 (이미 있으면 무시) |
-| `set.has(value)` | 값 존재 여부 |
-| `set.size` | 요소 개수 |
-| `set.delete(value)` | 값 삭제 |
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `set.add(value)` | 값 추가 (이미 있으면 무시) | O(1) |
+| `set.has(value)` | 값 존재 여부 | O(1) |
+| `set.size` | 요소 개수 | O(1) |
+| `set.delete(value)` | 값 삭제 | O(1) |
 
 핵심 패턴: **Array → Set → Array** 변환으로 중복 제거
 ```javascript

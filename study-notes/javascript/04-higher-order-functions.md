@@ -19,18 +19,18 @@
 
 ## 핵심 메서드
 
-| 메서드 | 설명 | 반환값 |
-|---|---|---|
-| `filter(callback)` | 조건에 맞는 요소만 추출 | 새 배열 |
-| `map(callback)` | 각 요소를 변환 | 새 배열 |
-| `reduce(callback, initial)` | 모든 요소를 하나로 합침 | 단일 값 |
-| `find(callback)` | 조건에 맞는 첫 번째 요소 | 요소 또는 undefined |
-| `findIndex(callback)` | 조건에 맞는 첫 번째 인덱스 | 인덱스 또는 -1 |
-| `some(callback)` | 하나라도 조건 만족? | boolean |
-| `every(callback)` | 모두 조건 만족? | boolean |
-| `flat(depth)` | 중첩 배열 평탄화 | 새 배열 |
-| `flatMap(callback)` | map + flat(1) | 새 배열 |
-| `forEach(callback)` | 각 요소에 대해 실행 | undefined |
+| 메서드 | 설명 | 반환값 | 시간복잡도 |
+|---|---|---|---|
+| `filter(callback)` | 조건에 맞는 요소만 추출 | 새 배열 | O(n) |
+| `map(callback)` | 각 요소를 변환 | 새 배열 | O(n) |
+| `reduce(callback, initial)` | 모든 요소를 하나로 합침 | 단일 값 | O(n) |
+| `find(callback)` | 조건에 맞는 첫 번째 요소 | 요소 또는 undefined | O(n) |
+| `findIndex(callback)` | 조건에 맞는 첫 번째 인덱스 | 인덱스 또는 -1 | O(n) |
+| `some(callback)` | 하나라도 조건 만족? | boolean | O(n) |
+| `every(callback)` | 모두 조건 만족? | boolean | O(n) |
+| `flat(depth)` | 중첩 배열 평탄화 | 새 배열 | O(n) |
+| `flatMap(callback)` | map + flat(1) | 새 배열 | O(n) |
+| `forEach(callback)` | 각 요소에 대해 실행 | undefined | O(n) |
 
 ---
 

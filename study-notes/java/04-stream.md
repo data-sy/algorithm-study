@@ -20,26 +20,26 @@
 
 ### 중간 연산 (Intermediate) — Stream을 반환, 체이닝 가능
 
-| 메서드 | 설명 |
-|---|---|
-| `filter(Predicate)` | 조건에 맞는 요소만 통과 |
-| `map(Function)` | 각 요소를 변환 |
-| `sorted()` | 자연순 정렬 |
-| `sorted(Comparator)` | 커스텀 정렬 |
-| `distinct()` | 중복 제거 |
-| `limit(n)` | 처음 n개만 |
-| `flatMap(Function)` | 중첩 구조 평탄화 |
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `filter(Predicate)` | 조건에 맞는 요소만 통과 | O(n) |
+| `map(Function)` | 각 요소를 변환 | O(n) |
+| `sorted()` | 자연순 정렬 | O(n log n) |
+| `sorted(Comparator)` | 커스텀 정렬 | O(n log n) |
+| `distinct()` | 중복 제거 | O(n) |
+| `limit(n)` | 처음 n개만 | O(n) |
+| `flatMap(Function)` | 중첩 구조 평탄화 | O(n) |
 
 ### 최종 연산 (Terminal) — 결과를 반환, 파이프라인 종료
 
-| 메서드 | 설명 |
-|---|---|
-| `collect(Collectors.toList())` | 결과를 List로 수집 |
-| `toList()` | 결과를 List로 수집 (Java 16+, 불변) |
-| `forEach(Consumer)` | 각 요소에 대해 동작 수행 |
-| `count()` | 요소 개수 반환 (long) |
-| `findFirst()` | 첫 번째 요소 반환 (Optional) |
-| `reduce(identity, BinaryOperator)` | 요소를 하나로 합침 |
+| 메서드 | 설명 | 시간복잡도 |
+|---|---|---|
+| `collect(Collectors.toList())` | 결과를 List로 수집 | O(n) |
+| `toList()` | 결과를 List로 수집 (Java 16+, 불변) | O(n) |
+| `forEach(Consumer)` | 각 요소에 대해 동작 수행 | O(n) |
+| `count()` | 요소 개수 반환 (long) | O(n) |
+| `findFirst()` | 첫 번째 요소 반환 (Optional) | O(1) |
+| `reduce(identity, BinaryOperator)` | 요소를 하나로 합침 | O(n) |
 
 ### collect(Collectors.toList()) vs toList()
 ```java
