@@ -67,6 +67,28 @@ List<Integer> filtered = Arrays.asList(1, 2, 3, 4).stream()
         .collect(Collectors.toList()); // [2, 4]
 ```
 
+#### Java는 체이닝이 기본 vs JS는 끊어쓰기도 가능
+
+Java는 Stream을 열면 체이닝으로 한 번에 이어써야 자연스럽다. 중간에 끊으려면 매번 collect()로 닫고 다시 stream()을 열어야 해서 비효율적이다.
+JS는 각 고차함수가 바로 배열을 반환하므로, 체이닝으로 이어쓰든 변수에 담아 끊어쓰든 자유롭다.
+```javascript
+// JS: 끊어쓰기 가능 — 각 단계가 독립적인 배열
+const scores = [45, 78, 92, 33, 88, 61, 55];
+const filtered = scores.filter(s => s >= 60);        // [78, 92, 88, 61]
+const added = filtered.map(s => s + 10);              // [88, 102, 98, 71]
+const result = added.reduce((sum, s) => sum + s, 0);  // 359
+```
+```java
+// Java: 끊어쓰면 매번 stream을 다시 열어야 함
+List<Integer> filtered = scores.stream()
+        .filter(s -> s >= 60)
+        .collect(Collectors.toList());             // stream 종료
+
+int result = filtered.stream()                     // 다시 stream 열어야 함
+        .map(s -> s + 10)
+        .reduce(0, Integer::sum);
+```
+
 #### Java Stream은 일회용 vs JS 배열은 재사용 가능
 
 Java는 성능을 위해 Stream을 별도 객체로 분리한 결과, 한 번 소비하면 재사용할 수 없다.
