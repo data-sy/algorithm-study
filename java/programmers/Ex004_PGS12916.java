@@ -3,8 +3,17 @@
 
 class Ex004_PGS12916 {
 
-    public void solution() {
+    boolean solution(String s) {
+        boolean answer = true;
 
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Ex004_PGS12916 sol = new Ex004_PGS12916();
+
+        System.out.println(sol.solution("pPoooyY")); // expected: true
+        System.out.println(sol.solution("Pyy"));     // expected: false
     }
 
 }
