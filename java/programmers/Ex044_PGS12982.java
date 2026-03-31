@@ -3,8 +3,16 @@
 
 class Ex044_PGS12982 {
 
-    public void solution() {
+    public int solution(int[] d, int budget) {
+        int answer = 0;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex044_PGS12982 sol = new Ex044_PGS12982();
+
+        System.out.println(sol.solution(new int[]{1,3,2,5,4}, 9)); // expected: 3
+        System.out.println(sol.solution(new int[]{2,2,3,3}, 10)); // expected: 4
     }
 
 }

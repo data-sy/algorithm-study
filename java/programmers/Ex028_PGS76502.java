@@ -3,8 +3,18 @@
 
 class Ex028_PGS76502 {
 
-    public void solution() {
+    public int solution(String s) {
+        int answer = -1;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex028_PGS76502 sol = new Ex028_PGS76502();
+
+        System.out.println(sol.solution("[](){}")); // expected: 3
+        System.out.println(sol.solution("}]()[{")); // expected: 2
+        System.out.println(sol.solution("[)(]")); // expected: 0
+        System.out.println(sol.solution("}}}")); // expected: 0
     }
 
 }

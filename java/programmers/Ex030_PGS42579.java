@@ -3,8 +3,15 @@
 
 class Ex030_PGS42579 {
 
-    public void solution() {
+    public int[] solution(String[] genres, int[] plays) {
+        int[] answer = {};
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex030_PGS42579 sol = new Ex030_PGS42579();
+
+        System.out.println(sol.solution(new String[]{"classic", "pop", "classic", "classic", "pop"}, new int[]{500, 600, 150, 800, 2500})); // expected: [4, 1, 3, 0]
     }
 
 }

@@ -3,8 +3,16 @@
 
 class Ex047_PGS42860 {
 
-    public void solution() {
+    public int solution(String name) {
+        int answer = 0;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex047_PGS42860 sol = new Ex047_PGS42860();
+
+        System.out.println(sol.solution("JEROEN")); // expected: 56
+        System.out.println(sol.solution("JAN")); // expected: 23
     }
 
 }

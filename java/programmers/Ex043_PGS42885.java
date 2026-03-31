@@ -3,8 +3,16 @@
 
 class Ex043_PGS42885 {
 
-    public void solution() {
+    public int solution(int[] people, int limit) {
+        int answer = 0;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex043_PGS42885 sol = new Ex043_PGS42885();
+
+        System.out.println(sol.solution(new int[]{70, 50, 80, 50}, 100)); // expected: 3
+        System.out.println(sol.solution(new int[]{70, 80, 50}, 100)); // expected: 3
     }
 
 }

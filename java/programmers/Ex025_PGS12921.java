@@ -3,8 +3,16 @@
 
 class Ex025_PGS12921 {
 
-    public void solution() {
+    public int solution(int n) {
+        int answer = 0;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex025_PGS12921 sol = new Ex025_PGS12921();
+
+        System.out.println(sol.solution(10)); // expected: 4
+        System.out.println(sol.solution(5)); // expected: 3
     }
 
 }

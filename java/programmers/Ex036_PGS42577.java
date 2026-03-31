@@ -3,8 +3,17 @@
 
 class Ex036_PGS42577 {
 
-    public void solution() {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex036_PGS42577 sol = new Ex036_PGS42577();
+
+        System.out.println(sol.solution(new String[]{"119", "97674223", "1195524421"})); // expected: false
+        System.out.println(sol.solution(new String[]{"123", "456", "789"}));             // expected: true
+        System.out.println(sol.solution(new String[]{"12", "123", "1235", "567", "88"})); // expected: false
     }
 
 }

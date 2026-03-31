@@ -2,8 +2,16 @@
 
 class Ex052_PGS92335 {
 
-    public void solution() {
+    public int solution(int n, int k) {
+        int answer = -1;
+        return answer;
+    }
 
+    public static void main(String[] args) {
+        Ex052_PGS92335 sol = new Ex052_PGS92335();
+
+        System.out.println(sol.solution(437674, 3)); // expected: 3
+        System.out.println(sol.solution(110011, 10)); // expected: 2
     }
 
 }
