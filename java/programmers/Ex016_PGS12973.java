@@ -3,7 +3,6 @@
 
 class Ex016_PGS12973 {
 
-{
     public int solution(String s)
     {
         int answer = -1;
@@ -13,13 +12,12 @@ class Ex016_PGS12973 {
 
         return answer;
     }
-}
 
     public static void main(String[] args) {
         Ex016_PGS12973 sol = new Ex016_PGS12973();
 
-        System.out.println(sol.solution(baabaa)); // expected: 1
-        System.out.println(sol.solution(cdcd)); // expected: 0
+        System.out.println(sol.solution("baabaa")); // expected: 1
+        System.out.println(sol.solution("cdcd")); // expected: 0
     }
 
 }
