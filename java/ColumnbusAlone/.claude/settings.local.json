@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(cat:*)",
-      "Bash(git commit:*)",
-      "Bash(rm /tmp/commit_msg.txt)"
-    ]
-  }
-}
