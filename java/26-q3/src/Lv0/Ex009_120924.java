@@ -17,8 +17,16 @@ public class Ex009_120924 {
     // - 등비수열인 경우 공비는 0이 아닌 정수
 
     public int solution(int[] common) {
-        // TODO: 풀이 작성
-        return 0;
+        int answer = 0;
+        int len = common.length;
+
+        int firstTerm = common[0];
+        int secondTerm = common[1];
+        int d = common[1] - common[0];
+        if (common[2]-common[1] == d) answer = common[0] + (len)*d;
+        else answer = (int) Math.pow(secondTerm/firstTerm,len)*common[0];
+
+        return answer;
     }
 
     // ===== 아래는 채점용. 풀이만 위에서 수정하면 됩니다 =====
