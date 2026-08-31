@@ -10,3 +10,6 @@ java/programmers/out
 # Claude Code 로컬 설정 — 권한 허용목록에 로컬 절대경로가 들어가므로 공유하지 않는다.
 # (.claude/commands/*.md 는 의도적으로 추적하는 공용 커맨드라 제외 대상이 아니다)
 **/.claude/settings.local.json
+
+# 빌드 산출물
+out/
