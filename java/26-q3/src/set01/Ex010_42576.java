@@ -16,8 +16,38 @@ public class Ex010_42576 {
     // - 참가자 중에는 동명이인이 있을 수 있음
 
     public String solution(String[] participant, String[] completion) {
-        // TODO: 풀이 작성
-        return "";
+//        // 배열 그대로 사용한다면
+//        // 시간복잡도 O(n^2) 라서 정확성 테스트는 통과하지만 효율성 테스트는 통과 못함
+//        String answer = "";
+//        for (int i = 0; i < completion.length; i++) {
+//            for (int j = 0; j < participant.length; j++) {
+//                if (completion[i].equals(participant[j])) {
+//                    participant[j]=null;
+//                    break;
+//                }
+//            }
+//        }
+//        for (int i = 0; i < participant.length; i++) {
+//            if (participant[i]!=null) {
+//                answer = participant[i];
+//            }
+//        }
+//        return answer;
+        String answer = "변화없음";
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < participant.length; i++) {
+            map.put(participant[i], map.getOrDefault(participant[i], 0) + 1);
+        }
+        for (int i = 0; i < completion.length; i++) {
+            map.put(completion[i], map.getOrDefault(completion[i], 0) - 1);
+        }
+        for (String key : map.keySet()) {
+            if (map.get(key) != 0) {
+                answer = key;
+                break;
+            }
+        }
+        return answer;
     }
 
     // ===== 아래는 채점용. 풀이만 위에서 수정하면 됩니다 =====
