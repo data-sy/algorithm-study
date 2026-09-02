@@ -21,7 +21,7 @@
 - `boj-to-programmers-map-상반-검수.md` — 상반 53건 재채점 (◎16 ○12 △18 ✗7)
 - `boj-to-programmers-map-중반.md` — 중반 53건 검수 + 교체 기록
 - `java/mapping.csv` — 상반 링크 매핑 CSV
-- `4. collections-study/` — Java Collections 학습 노트
+- `4. collections-study/` — Java Collections 학습서 (`part0`~`part3`). `🤖-` 접두사가 붙은 두 파일은 이 학습서를 생성한 프롬프트다
 
 ## 코드
 
