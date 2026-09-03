@@ -16,8 +16,17 @@ public class Ex011_42578 {
     // - 모든 문자열의 길이는 1 이상 20 이하이고 알파벳 소문자 또는 '_'로만 이루어짐
 
     public int solution(String[][] clothes) {
-        // TODO: 풀이 작성
-        return 0;
+        int answer = 1;
+        Map<String, Integer> map = new HashMap<>();
+        for (String[] cloth : clothes) {
+            String type = cloth[1];
+            map.put(type, map.getOrDefault(type, 0) + 1);
+        }
+        for (Integer count : map.values()) {
+            answer *= ++count;
+        }
+        answer--;
+        return answer;
     }
 
     // ===== 아래는 채점용. 풀이만 위에서 수정하면 됩니다 =====
