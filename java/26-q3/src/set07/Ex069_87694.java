@@ -6,16 +6,6 @@ public class Ex069_87694 {
 
     // 문제: 아이템 줍기
     // https://school.programmers.co.kr/learn/courses/30/lessons/87694
-    // 키워드: BFS·구현 - 좌표를 2배로 늘려 테두리만 남긴 뒤 테두리 위에서 최단거리 BFS
-    // 레벨: Lv.3 (2021 Dev-Matching: 웹 백엔드 개발자(상반기))
-    //
-    // 제한사항
-    // - rectangle의 세로(행) 길이는 1 이상 4 이하
-    // - rectangle의 원소는 [x1, y1, x2, y2] 형태이며 (x1, y1)은 좌측 하단, (x2, y2)는 우측 상단
-    // - 모든 좌표값은 1 이상 50 이하인 자연수
-    // - 서로 다른 두 직사각형의 x축 좌표 또는 y축 좌표가 같은 경우는 없음
-    // - 캐릭터와 아이템의 위치는 항상 다각형 테두리 위의 점
-    // - 캐릭터와 아이템의 위치는 서로 다름
 
     public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
         // TODO: 풀이 작성

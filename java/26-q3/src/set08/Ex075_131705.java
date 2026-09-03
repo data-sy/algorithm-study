@@ -6,13 +6,6 @@ public class Ex075_131705 {
 
     // 문제: 삼총사
     // https://school.programmers.co.kr/learn/courses/30/lessons/131705
-    // 키워드: 브루트포싱·조합 - 서로 다른 세 명을 골라 번호 합이 0이 되는 경우의 수
-    // 레벨: Lv.1 (연습문제)
-    //
-    // 제한사항
-    // - 3 <= number의 길이 <= 13
-    // - -1,000 <= number의 각 원소 <= 1,000
-    // - 서로 다른 학생의 정수 번호가 같을 수 있음
 
     public int solution(int[] number) {
         // TODO: 풀이 작성

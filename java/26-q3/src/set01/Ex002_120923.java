@@ -6,13 +6,6 @@ public class Ex002_120923 {
 
     // 문제: 연속된 수의 합
     // https://school.programmers.co.kr/learn/courses/30/lessons/120923
-    // 키워드: 수학 - 연속한 num개의 정수의 합이 total이 되는 수열
-    // 레벨: Lv.0 (코딩테스트 입문)
-    //
-    // 제한사항
-    // - 1 <= num <= 100
-    // - 0 <= total <= 1000
-    // - num개의 연속된 수를 더하여 total이 될 수 없는 테스트 케이스는 없음
 
     public int[] solution(int num, int total) {
         int[] answer = new int[num];

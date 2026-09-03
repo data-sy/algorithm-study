@@ -6,13 +6,6 @@ public class Ex012_42577 {
 
     // 문제: 전화번호 목록
     // https://school.programmers.co.kr/learn/courses/30/lessons/42577
-    // 키워드: 해시·정렬·트라이 - 어떤 번호가 다른 번호의 접두어인지 판별
-    // 레벨: Lv.2 (해시)
-    //
-    // 제한사항
-    // - phone_book의 길이는 1 이상 1,000,000 이하
-    // - 각 전화번호의 길이는 1 이상 20 이하
-    // - 같은 전화번호가 중복해서 들어있지 않음
 
     public boolean solution(String[] phone_book) {
         // TODO: 풀이 작성

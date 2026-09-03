@@ -6,16 +6,6 @@ public class Ex053_159993 {
 
     // 문제: 미로 탈출
     // https://school.programmers.co.kr/learn/courses/30/lessons/159993
-    // 키워드: BFS·최단 거리 - S→L 최단 + L→E 최단으로 쪼개서 각각 BFS
-    // 레벨: Lv.2 (코딩테스트 공부 - 그래프)
-    //
-    // 제한사항
-    // - 5 <= maps의 길이 <= 100
-    // - 5 <= maps[i]의 길이 <= 100
-    // - maps[i]는 'S', 'E', 'L', 'O', 'X'로 이루어진 문자열
-    //   S = 시작 지점, E = 출구, L = 레버, O = 통로, X = 벽
-    // - 지도에는 미로를 탈출하는 경로가 없는 경우도 있으며, 이때는 -1을 return
-    // - S, E, L은 지도에 각각 하나씩만 존재
 
     public int solution(String[] maps) {
         // TODO: 풀이 작성

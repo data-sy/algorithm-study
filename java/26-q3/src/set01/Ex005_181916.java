@@ -6,18 +6,6 @@ public class Ex005_181916 {
 
     // 문제: 주사위 게임 3
     // https://school.programmers.co.kr/learn/courses/30/lessons/181916
-    // 키워드: 조건 분기 - 네 주사위 눈의 중복 패턴별 점수 계산
-    // 레벨: Lv.0 (코딩 기초 트레이닝)
-    //
-    // 제한사항
-    // - a, b, c, d는 1 이상 6 이하의 정수
-    //
-    // 점수 규칙
-    // - 네 개 모두 p        : 1111 * p
-    // - 세 개 p, 나머지 q   : (10 * p + q)^2
-    // - 두 개씩 p, q        : (p + q) * |p - q|
-    // - 두 개 p, 나머지 q,r : q * r
-    // - 모두 다름           : 가장 작은 숫자
 
     public int solution(int a, int b, int c, int d) {
         int answer = 0;

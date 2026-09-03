@@ -6,14 +6,6 @@ public class Ex021_42748 {
 
     // 문제: K번째수
     // https://school.programmers.co.kr/learn/courses/30/lessons/42748
-    // 키워드: 정렬 - [i, j] 구간을 잘라 정렬한 뒤 k번째 수를 뽑는다 (1-indexed)
-    // 레벨: Lv.1 (정렬)
-    //
-    // 제한사항
-    // - array의 길이는 1 이상 100 이하
-    // - array의 각 원소는 1 이상 100 이하
-    // - commands의 길이는 1 이상 50 이하
-    // - commands의 각 원소는 길이가 3
 
     public int[] solution(int[] array, int[][] commands) {
         // TODO: 풀이 작성

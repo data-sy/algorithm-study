@@ -6,13 +6,6 @@ public class Ex006_120876 {
 
     // 문제: 겹치는 선분의 길이
     // https://school.programmers.co.kr/learn/courses/30/lessons/120876
-    // 키워드: 구간 - 세 선분 중 두 개 이상이 겹치는 구간의 길이 (단위 구간 카운팅)
-    // 레벨: Lv.0 (코딩테스트 입문)
-    //
-    // 제한사항
-    // - lines의 길이 = 3, lines의 원소의 길이 = 2
-    // - 모든 선분은 길이가 1 이상
-    // - lines의 원소는 [a, b] 형태이며 -100 <= a < b <= 100
 
     public int solution(int[][] lines) {
         int answer = 0;

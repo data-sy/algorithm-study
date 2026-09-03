@@ -6,12 +6,6 @@ public class Ex072_12900 {
 
     // 문제: 2 x n 타일링
     // https://school.programmers.co.kr/learn/courses/30/lessons/12900
-    // 키워드: DP - dp[n] = dp[n-1] + dp[n-2], 1,000,000,007로 나눈 나머지
-    // 레벨: Lv.2 (연습문제)
-    //
-    // 제한사항
-    // - 가로의 길이 n은 60,000 이하의 자연수
-    // - 경우의 수가 많아질 수 있으므로, 경우의 수를 1,000,000,007로 나눈 나머지를 return
 
     public long solution(int n) {
         // TODO: 풀이 작성

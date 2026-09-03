@@ -6,13 +6,6 @@ public class Ex003_120866 {
 
     // 문제: 안전지대
     // https://school.programmers.co.kr/learn/courses/30/lessons/120866
-    // 키워드: 2차원 배열 - 지뢰(1)의 8방향 인접 칸을 위험지역으로 칠하고 남은 칸 세기
-    // 레벨: Lv.0 (코딩테스트 입문)
-    //
-    // 제한사항
-    // - board는 n * n 배열
-    // - 1 <= n <= 100
-    // - board에는 지뢰가 있는 지역 1과 지뢰가 없는 지역 0만 존재
 
     static int[] x = {-1, -1, -1, 0, 0, 1, 1, 1};
     static int[] y = {-1, 0, 1, -1, 1, -1, 0, 1};

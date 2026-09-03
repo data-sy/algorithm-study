@@ -6,13 +6,6 @@ public class Ex023_42746 {
 
     // 문제: 가장 큰 수
     // https://school.programmers.co.kr/learn/courses/30/lessons/42746
-    // 키워드: 정렬·문자열 - (b+a) vs (a+b) 비교로 이어붙인 결과가 커지는 순서로 정렬
-    // 레벨: Lv.2 (정렬)
-    //
-    // 제한사항
-    // - numbers의 길이는 1 이상 100,000 이하
-    // - numbers의 원소는 0 이상 1,000 이하
-    // - 정답이 너무 클 수 있으니 문자열로 바꾸어 return
 
     public String solution(int[] numbers) {
         // TODO: 풀이 작성

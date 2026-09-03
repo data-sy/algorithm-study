@@ -6,13 +6,6 @@ public class Ex045_43165 {
 
     // 문제: 타겟 넘버
     // https://school.programmers.co.kr/learn/courses/30/lessons/43165
-    // 키워드: DFS·브루트포싱 - 각 숫자에 +/-를 붙여 target이 되는 경우의 수
-    // 레벨: Lv.2 (깊이/너비 우선 탐색(DFS/BFS))
-    //
-    // 제한사항
-    // - 주어지는 숫자의 개수는 2개 이상 20개 이하
-    // - 각 숫자는 1 이상 50 이하인 자연수
-    // - 타겟 넘버는 1 이상 1000 이하인 자연수
 
     public int solution(int[] numbers, int target) {
         // TODO: 풀이 작성

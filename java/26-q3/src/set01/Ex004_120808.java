@@ -6,11 +6,6 @@ public class Ex004_120808 {
 
     // 문제: 분수의 덧셈
     // https://school.programmers.co.kr/learn/courses/30/lessons/120808
-    // 키워드: 수학 - 두 분수를 더해 기약분수로 (유클리드 호제법)
-    // 레벨: Lv.0 (코딩테스트 입문)
-    //
-    // 제한사항
-    // - 0 < numer1, denom1, numer2, denom2 < 1,000
 
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
         int[] answer = {};

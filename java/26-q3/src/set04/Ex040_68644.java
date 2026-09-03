@@ -6,12 +6,6 @@ public class Ex040_68644 {
 
     // 문제: 두 개 뽑아서 더하기
     // https://school.programmers.co.kr/learn/courses/30/lessons/68644
-    // 키워드: 브루트포싱·조합 - 서로 다른 두 인덱스의 합을 중복 없이 모아 오름차순 정렬
-    // 레벨: Lv.1 (월간 코드 챌린지 시즌1)
-    //
-    // 제한사항
-    // - numbers의 길이는 2 이상 100 이하
-    // - numbers의 모든 수는 0 이상 100 이하
 
     public int[] solution(int[] numbers) {
         // TODO: 풀이 작성

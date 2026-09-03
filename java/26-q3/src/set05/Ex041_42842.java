@@ -6,14 +6,6 @@ public class Ex041_42842 {
 
     // 문제: 카펫
     // https://school.programmers.co.kr/learn/courses/30/lessons/42842
-    // 키워드: 브루트포싱·수학 - 전체 격자 수의 약수를 훑어 (가로-2)*(세로-2)=yellow인 쌍을 찾는다
-    // 레벨: Lv.2 (완전탐색)
-    //
-    // 제한사항
-    // - 갈색 격자의 수 brown은 8 이상 5,000 이하인 자연수
-    // - 노란색 격자의 수 yellow는 1 이상 2,000,000 이하인 자연수
-    // - 카펫의 가로 길이는 세로 길이와 같거나 길다
-    // - 반환값은 [가로 길이, 세로 길이]
 
     public int[] solution(int brown, int yellow) {
         // TODO: 풀이 작성

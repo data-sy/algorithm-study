@@ -6,12 +6,6 @@ public class Ex032_42860 {
 
     // 문제: 조이스틱
     // https://school.programmers.co.kr/learn/courses/30/lessons/42860
-    // 키워드: 그리디·문자열 - 상하 조작은 독립적으로 계산하고, 좌우 이동만 최소 경로를 고른다
-    // 레벨: Lv.2 (탐욕법)
-    //
-    // 제한사항
-    // - name은 알파벳 대문자로만 이루어져 있음
-    // - name의 길이는 1 이상 20 이하
 
     public int solution(String name) {
         // TODO: 풀이 작성

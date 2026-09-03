@@ -6,12 +6,6 @@ public class Ex071_12914 {
 
     // 문제: 멀리 뛰기
     // https://school.programmers.co.kr/learn/courses/30/lessons/12914
-    // 키워드: DP - 1칸 또는 2칸씩. 결국 피보나치이며 1234567로 나눈 나머지를 반환
-    // 레벨: Lv.2 (연습문제)
-    //
-    // 제한사항
-    // - n은 1 이상, 2000 이하인 정수
-    // - 방법의 수를 1234567로 나눈 나머지를 return
 
     public long solution(int n) {
         // TODO: 풀이 작성

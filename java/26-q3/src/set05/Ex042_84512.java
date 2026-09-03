@@ -6,12 +6,6 @@ public class Ex042_84512 {
 
     // 문제: 모음사전
     // https://school.programmers.co.kr/learn/courses/30/lessons/84512
-    // 키워드: 브루트포싱·DFS·백트래킹 - AEIOU로 만든 사전 순 단어에서 word가 몇 번째인지
-    // 레벨: Lv.2 (2021 카카오 채용연계형 인턴십)
-    //
-    // 제한사항
-    // - word의 길이는 1 이상 5 이하
-    // - word는 알파벳 대문자 'A', 'E', 'I', 'O', 'U'로만 이루어져 있음
 
     public int solution(String word) {
         // TODO: 풀이 작성

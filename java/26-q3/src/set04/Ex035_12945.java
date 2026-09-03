@@ -6,12 +6,6 @@ public class Ex035_12945 {
 
     // 문제: 피보나치 수
     // https://school.programmers.co.kr/learn/courses/30/lessons/12945
-    // 키워드: 재귀·DP - 매 항마다 1234567로 나눈 나머지를 유지하며 올라간다 (오버플로 주의)
-    // 레벨: Lv.2 (연습문제)
-    //
-    // 제한사항
-    // - n은 2 이상 100,000 이하인 자연수
-    // - 반환값은 n번째 피보나치 수를 1234567로 나눈 나머지
 
     public int solution(int n) {
         // TODO: 풀이 작성

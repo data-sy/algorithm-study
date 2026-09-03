@@ -6,12 +6,6 @@ public class Ex037_12977 {
 
     // 문제: 소수 만들기
     // https://school.programmers.co.kr/learn/courses/30/lessons/12977
-    // 키워드: 브루트포싱·조합·수학 - 서로 다른 3개를 고른 합이 소수인 경우의 수
-    // 레벨: Lv.1 (Summer/Winter Coding(~2018))
-    //
-    // 제한사항
-    // - nums에 들어있는 숫자의 개수는 3개 이상 50개 이하
-    // - nums의 각 원소는 1 이상 1,000 이하의 자연수이며, 중복된 숫자가 들어있지 않음
 
     public int solution(int[] nums) {
         // TODO: 풀이 작성

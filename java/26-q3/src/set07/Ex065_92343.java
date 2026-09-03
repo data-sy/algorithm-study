@@ -6,16 +6,6 @@ public class Ex065_92343 {
 
     // 문제: 양과 늑대
     // https://school.programmers.co.kr/learn/courses/30/lessons/92343
-    // 키워드: 트리·DFS·브루트포싱 - 늑대 수가 양 수 이상이 되면 안 되므로 방문 가능 집합을 넓혀가며 탐색
-    // 레벨: Lv.3 (2022 KAKAO BLIND RECRUITMENT)
-    //
-    // 제한사항
-    // - 2 <= info의 길이 <= 17
-    // - info의 원소는 0 또는 1 (0은 양, 1은 늑대)
-    // - info[0]은 항상 0 (루트 노드는 항상 양)
-    // - edges의 행 길이 = info의 길이 - 1
-    // - edges의 열 길이는 2이며, [부모 노드 번호, 자식 노드 번호] 형태
-    // - 항상 하나의 이진 트리 형태로 입력이 주어짐
 
     public int solution(int[] info, int[][] edges) {
         // TODO: 풀이 작성

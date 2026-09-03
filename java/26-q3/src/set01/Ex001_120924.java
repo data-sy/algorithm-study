@@ -6,15 +6,6 @@ public class Ex001_120924 {
 
     // 문제: 다음에 올 숫자
     // https://school.programmers.co.kr/learn/courses/30/lessons/120924
-    // 키워드: 수학 - 등차수열 또는 등비수열의 마지막 원소 다음에 올 숫자
-    // 레벨: Lv.0 (코딩테스트 입문)
-    //
-    // 제한사항
-    // - 2 < common의 길이 < 1,000
-    // - -1,000 < common의 원소 < 2,000
-    // - common의 원소는 모두 정수
-    // - 등차수열 혹은 등비수열이 아닌 경우는 없음
-    // - 등비수열인 경우 공비는 0이 아닌 정수
 
     public int solution(int[] common) {
         int answer = 0;

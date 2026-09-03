@@ -6,11 +6,6 @@ public class Ex008_181832 {
 
     // 문제: 정수를 나선형으로 배치하기
     // https://school.programmers.co.kr/learn/courses/30/lessons/181832
-    // 키워드: 시뮬레이션 - n*n 배열에 1부터 n^2까지 시계방향 나선형으로 채우기
-    // 레벨: Lv.0 (코딩 기초 트레이닝)
-    //
-    // 제한사항
-    // - 1 <= n <= 30
 
     public int[][] solution(int n) {
         int[] dr = {0, 1, 0, -1};

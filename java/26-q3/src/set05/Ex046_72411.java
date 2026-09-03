@@ -6,17 +6,6 @@ public class Ex046_72411 {
 
     // 문제: 메뉴 리뉴얼
     // https://school.programmers.co.kr/learn/courses/30/lessons/72411
-    // 키워드: 브루트포싱·조합·문자열 - 코스 길이별 조합을 세어 최다(2회 이상) 조합만 남긴다
-    // 레벨: Lv.2 (2021 KAKAO BLIND RECRUITMENT)
-    //
-    // 제한사항
-    // - orders 배열의 크기는 2 이상 20 이하
-    // - orders의 각 원소는 크기가 2 이상 10 이하인 문자열
-    //   (각 문자는 대문자 알파벳이며 중복되지 않음)
-    // - course 배열의 크기는 1 이상 10 이하
-    // - course의 각 원소는 2 이상 10 이하인 자연수이며 중복되지 않음
-    // - 반환 배열은 사전 순으로 오름차순 정렬
-    // - 같은 개수로 가장 많이 함께 주문된 메뉴 조합이 여러 개면 모두 반환
 
     public String[] solution(String[] orders, int[] course) {
         // TODO: 풀이 작성

@@ -6,12 +6,6 @@ public class Ex033_42883 {
 
     // 문제: 큰 수 만들기
     // https://school.programmers.co.kr/learn/courses/30/lessons/42883
-    // 키워드: 그리디·스택 - 뒤에 더 큰 수가 오면 앞의 작은 수를 스택에서 빼며 k개를 제거
-    // 레벨: Lv.2 (탐욕법)
-    //
-    // 제한사항
-    // - number는 2자리 이상, 1,000,000자리 이하인 숫자
-    // - k는 1 이상 number의 자릿수 미만인 자연수
 
     public String solution(String number, int k) {
         // TODO: 풀이 작성

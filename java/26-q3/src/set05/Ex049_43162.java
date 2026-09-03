@@ -6,14 +6,6 @@ public class Ex049_43162 {
 
     // 문제: 네트워크
     // https://school.programmers.co.kr/learn/courses/30/lessons/43162
-    // 키워드: DFS·BFS·그래프 이론 - 연결 요소(connected component)의 개수
-    // 레벨: Lv.3 (깊이/너비 우선 탐색(DFS/BFS))
-    //
-    // 제한사항
-    // - 컴퓨터의 개수 n은 1 이상 200 이하인 자연수
-    // - 각 컴퓨터는 0부터 n-1인 정수로 표현
-    // - i번 컴퓨터와 j번 컴퓨터가 연결되어 있으면 computers[i][j]를 1로 표현
-    // - computers[i][i]는 항상 1
 
     public int solution(int n, int[][] computers) {
         // TODO: 풀이 작성
