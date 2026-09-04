@@ -8,7 +8,26 @@ public class Ex012_42577 {
     // https://school.programmers.co.kr/learn/courses/30/lessons/42577
 
     public boolean solution(String[] phone_book) {
-        // TODO: 풀이 작성
+//        // 문자 정렬을 이용해서 푼 풀이
+//        Arrays.sort(phone_book);
+//        for (int i = 0; i < phone_book.length - 1; i++) {
+//            if(phone_book[i+1].startsWith(phone_book[i])){
+//                return false;
+//            }
+//        }
+//        return true;
+
+//        // 문제의 의도는 해시이므로 해시로 풀어보자.
+//        Set<String> set = new HashSet<>(Arrays.asList(phone_book));
+//        for (String phone : phone_book) {
+//            for (int i=0; i<phone.length(); i++) {
+//                if (set.contains(phone.substring(0, i))) return false;
+//            }
+//        }
+//        return true;
+
+        // TODO: 문제 구조는 트라이의 전형이긴 함. 트라이 이용해서 풀어보기
+        //
         return false;
     }
 
