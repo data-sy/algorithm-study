@@ -8,7 +8,18 @@ public class Ex014_12909 {
     // https://school.programmers.co.kr/learn/courses/30/lessons/12909
 
     public boolean solution(String s) {
-        // TODO: 풀이 작성
+        Deque<Character> stack = new ArrayDeque<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c=='(') stack.push('(');
+            else if (c==')') {
+                if (stack.isEmpty()) return false;
+                else if (stack.peek()=='('){
+                    stack.pop();
+                } else return false;
+            }
+        }
+        if (stack.isEmpty()) return true;
         return false;
     }
 
