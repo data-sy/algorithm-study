@@ -8,8 +8,33 @@ public class Ex015_42586 {
     // https://school.programmers.co.kr/learn/courses/30/lessons/42586
 
     public int[] solution(int[] progresses, int[] speeds) {
-        // TODO: 풀이 작성
-        return new int[0];
+        Queue<Integer> days = new LinkedList<>();
+        for (int i = 0; i < progresses.length; i++) {
+            int day = 0;
+            int sum = progresses[i];
+            while (sum <= 100) {
+                day++;
+                sum += speeds[i];
+            }
+            days.add(day);
+        }
+
+        ArrayList<Integer> answer = new ArrayList<>();
+        Integer pivot = days.poll();
+        Integer count = 1;
+        if (days.isEmpty()) return new int[]{count};
+        while (!days.isEmpty()) {
+            Integer day = days.poll();
+            if (pivot >= day) {
+                count++;
+            } else {
+                answer.add(count);
+                pivot = day;
+                count = 1;
+            }
+        }
+        answer.add(count);
+        return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 
     // ===== 아래는 채점용. 풀이만 위에서 수정하면 됩니다 =====
